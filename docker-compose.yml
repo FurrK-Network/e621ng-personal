@@ -88,7 +88,7 @@ services:
       - POSTGRES_DB=e621_development
       - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:
-      - ./ART_DATA/db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
     ports:
       - "${EXPOSED_POSTGRES_PORT:-34517}:5432"
 
@@ -190,6 +190,7 @@ services:
       - linter
 
 volumes:
+  db_data:
   iqdb_data:
   opensearch_data:
   redis_data_v2:
