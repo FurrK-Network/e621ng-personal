@@ -4,7 +4,7 @@
 CONTAINER_NAME="e621ng-personal-postgres-1"
 DB_NAME="e621_development"
 DB_USER="e621"
-DUMP_DIR="./dumps"
+DUMP_DIR="./dump"
 
 echo "Running pre-push checks..."
 
