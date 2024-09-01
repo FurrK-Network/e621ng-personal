@@ -3163,8 +3163,8 @@ COPY public.api_keys (id, user_id, key, created_at, updated_at) FROM stdin;
 --
 
 COPY public.ar_internal_metadata (key, value, created_at, updated_at) FROM stdin;
-environment	development	2024-09-01 03:45:09.645883	2024-09-01 03:45:09.645885
-schema_sha1	f2e98d318322cce7af7d935e2d86308f8c496284	2024-09-01 03:45:09.652472	2024-09-01 03:45:09.652473
+environment	development	2024-09-01 04:04:57.277154	2024-09-01 04:04:57.277156
+schema_sha1	f2e98d318322cce7af7d935e2d86308f8c496284	2024-09-01 04:04:57.282481	2024-09-01 04:04:57.282483
 \.
 
 
@@ -3173,6 +3173,10 @@ schema_sha1	f2e98d318322cce7af7d935e2d86308f8c496284	2024-09-01 03:45:09.652472	
 --
 
 COPY public.artist_urls (id, artist_id, url, normalized_url, created_at, updated_at, is_active) FROM stdin;
+1	1	https://t.me/Starselle	http://t.me/Starselle/	2024-09-01 04:14:23.858062	2024-09-01 04:14:23.858062	t
+2	1	https://t.me/Starsellensfw	http://t.me/Starsellensfw/	2024-09-01 04:14:23.862031	2024-09-01 04:14:23.862031	t
+3	1	https://t.me/Starsie	http://t.me/Starsie/	2024-09-01 04:14:23.864768	2024-09-01 04:14:23.864768	t
+4	1	https://x.com/Starsielle	http://x.com/Starsielle/	2024-09-01 04:14:23.86682	2024-09-01 04:14:23.86682	t
 \.
 
 
@@ -3181,6 +3185,8 @@ COPY public.artist_urls (id, artist_id, url, normalized_url, created_at, updated
 --
 
 COPY public.artist_versions (id, artist_id, name, updater_id, updater_ip_addr, is_active, group_name, created_at, updated_at, other_names, urls, notes_changed) FROM stdin;
+1	1	starselle	1	172.19.0.1	t		2024-09-01 04:14:23.903532	2024-09-01 04:14:23.903532	{starsie}	{https://t.me/Starselle,https://t.me/Starsellensfw,https://t.me/Starsie,https://x.com/Starsielle}	f
+2	2	starsie	1	172.19.0.1	t		2024-09-01 04:14:31.227654	2024-09-01 04:14:31.227654	{starselle}	{}	f
 \.
 
 
@@ -3189,6 +3195,8 @@ COPY public.artist_versions (id, artist_id, name, updater_id, updater_ip_addr, i
 --
 
 COPY public.artists (id, name, creator_id, is_active, group_name, created_at, updated_at, other_names, linked_user_id, is_locked) FROM stdin;
+1	starselle	1	t		2024-09-01 04:14:23.847719	2024-09-01 04:14:23.867971	{starsie}	\N	f
+2	starsie	1	t		2024-09-01 04:14:31.219634	2024-09-01 04:14:31.219634	{starselle}	\N	f
 \.
 
 
@@ -3229,6 +3237,8 @@ COPY public.blips (id, creator_ip_addr, creator_id, body, response_to, is_hidden
 --
 
 COPY public.bulk_update_requests (id, user_id, forum_topic_id, script, status, created_at, updated_at, approver_id, forum_post_id, title, user_ip_addr) FROM stdin;
+1	1	\N	implicate basil -> bird\nimplicate basil -> avian\nimplicate basil -> corvid\nimplicate basil -> corvus_(genus)\nimplicate basil -> crow\nimplicate basil -> oscine\nimplicate basil -> passerine\nimplicate basil -> anthro\nimplicate basil -> white_feathers	approved	2024-09-01 04:10:03.512359	2024-09-01 04:10:06.347219	1	\N	Basil	127.0.0.1
+2	1	\N	implicate zuri -> felid\nimplicate zuri -> cheetah\nimplicate zuri -> feline\nimplicate zuri -> felis\nimplicate zuri -> mammal\nimplicate zuri -> anthro\nimplicate zuri -> black_body\nimplicate zuri -> black_fur\nimplicate zuri -> blonde_highlights\nimplicate zuri -> cheek_tuft\nimplicate zuri -> chest_ruft\nimplicate zuri -> ear_piercing\nimplicate zuri -> facial_tuft\nimplicate zuri -> fur\nimplicate zuri -> hair\nimplicate zuri -> highlights_(coloring)\nimplicate zuri -> industrial_piercing\nimplicate zuri -> industrial_piercing_ladder\nimplicate zuri -> inner_ear_fluff\nimplicate zuri -> male\nimplicate zuri -> markings\nimplicate zuri -> piercing\nimplicate zuri -> spots\nimplicate zuri -> spotted_body\nimplicate zuri -> spotted_fur\nimplicate zuri -> tail\nimplicate zuri -> tongue\nimplicate zuri -> tongue_out\nimplicate zuri -> tuft\nimplicate zuri -> white_body\nimplicate zuri -> white_fur\nimplicate serene_form -> blue_eyes	approved	2024-09-01 04:13:16.808832	2024-09-01 04:13:20.139274	1	\N	Zuri	127.0.0.1
 \.
 
 
@@ -3374,7 +3384,7 @@ COPY public.ip_bans (id, creator_id, ip_addr, reason, created_at, updated_at) FR
 --
 
 COPY public.mascots (id, creator_id, display_name, md5, file_ext, background_color, artist_url, artist_name, active, created_at, updated_at, available_on) FROM stdin;
-1	1	Hexerade 3	53a014c46528923fc4baf2192af926bd	png	#012e57	https://furaffinity.net/user/chizi	chizi	t	2024-09-01 03:45:33.8679	2024-09-01 03:45:33.8679	{e621}
+1	1	Hexerade 3	53a014c46528923fc4baf2192af926bd	png	#012e57	https://furaffinity.net/user/chizi	chizi	t	2024-09-01 04:05:18.509779	2024-09-01 04:05:18.509779	{e621}
 \.
 
 
@@ -3383,8 +3393,131 @@ COPY public.mascots (id, creator_id, display_name, md5, file_ext, background_col
 --
 
 COPY public.mod_actions (id, creator_id, created_at, updated_at, action, "values") FROM stdin;
-1	1	2024-09-01 03:45:33.936921	2024-09-01 03:45:33.936921	upload_whitelist_create	{"pattern":"https://static1.e621.net/*","note":null,"hidden":false}
-2	1	2024-09-01 03:45:33.942036	2024-09-01 03:45:33.942036	upload_whitelist_update	{"pattern":"https://static1.e621.net/*","note":null,"old_pattern":null,"hidden":false}
+1	1	2024-09-01 04:05:18.566537	2024-09-01 04:05:18.566537	upload_whitelist_create	{"pattern":"https://static1.e621.net/*","note":null,"hidden":false}
+2	1	2024-09-01 04:05:18.571858	2024-09-01 04:05:18.571858	upload_whitelist_update	{"pattern":"https://static1.e621.net/*","note":null,"old_pattern":null,"hidden":false}
+3	1	2024-09-01 04:10:05.944042	2024-09-01 04:10:05.944042	tag_implication_update	{"implication_id":1,"implication_desc":"\\"tag implication #1\\":[/tag_implications/1]: [[basil]] -\\u003e [[bird]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+4	1	2024-09-01 04:10:06.043492	2024-09-01 04:10:06.043492	tag_implication_update	{"implication_id":2,"implication_desc":"\\"tag implication #2\\":[/tag_implications/2]: [[basil]] -\\u003e [[avian]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+5	1	2024-09-01 04:10:06.091751	2024-09-01 04:10:06.091751	tag_implication_update	{"implication_id":3,"implication_desc":"\\"tag implication #3\\":[/tag_implications/3]: [[basil]] -\\u003e [[corvid]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+6	1	2024-09-01 04:10:06.13115	2024-09-01 04:10:06.13115	tag_implication_update	{"implication_id":4,"implication_desc":"\\"tag implication #4\\":[/tag_implications/4]: [[basil]] -\\u003e [[corvus_(genus)]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+7	1	2024-09-01 04:10:06.175268	2024-09-01 04:10:06.175268	tag_implication_update	{"implication_id":5,"implication_desc":"\\"tag implication #5\\":[/tag_implications/5]: [[basil]] -\\u003e [[crow]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+8	1	2024-09-01 04:10:06.213735	2024-09-01 04:10:06.213735	tag_implication_update	{"implication_id":6,"implication_desc":"\\"tag implication #6\\":[/tag_implications/6]: [[basil]] -\\u003e [[oscine]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+9	1	2024-09-01 04:10:06.247474	2024-09-01 04:10:06.247474	tag_implication_update	{"implication_id":7,"implication_desc":"\\"tag implication #7\\":[/tag_implications/7]: [[basil]] -\\u003e [[passerine]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+10	1	2024-09-01 04:10:06.28895	2024-09-01 04:10:06.28895	tag_implication_update	{"implication_id":8,"implication_desc":"\\"tag implication #8\\":[/tag_implications/8]: [[basil]] -\\u003e [[anthro]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+11	1	2024-09-01 04:10:06.330554	2024-09-01 04:10:06.330554	tag_implication_update	{"implication_id":9,"implication_desc":"\\"tag implication #9\\":[/tag_implications/9]: [[basil]] -\\u003e [[white_feathers]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+12	1	2024-09-01 04:10:06.917391	2024-09-01 04:10:06.917391	tag_implication_update	{"implication_id":5,"implication_desc":"\\"tag implication #5\\":[/tag_implications/5]: [[basil]] -\\u003e [[crow]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+13	1	2024-09-01 04:10:06.92488	2024-09-01 04:10:06.92488	tag_implication_update	{"implication_id":2,"implication_desc":"\\"tag implication #2\\":[/tag_implications/2]: [[basil]] -\\u003e [[avian]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+14	1	2024-09-01 04:10:06.931451	2024-09-01 04:10:06.931451	tag_implication_update	{"implication_id":4,"implication_desc":"\\"tag implication #4\\":[/tag_implications/4]: [[basil]] -\\u003e [[corvus_(genus)]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+15	1	2024-09-01 04:10:06.937694	2024-09-01 04:10:06.937694	tag_implication_update	{"implication_id":3,"implication_desc":"\\"tag implication #3\\":[/tag_implications/3]: [[basil]] -\\u003e [[corvid]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+16	1	2024-09-01 04:10:06.959263	2024-09-01 04:10:06.959263	tag_implication_update	{"implication_id":1,"implication_desc":"\\"tag implication #1\\":[/tag_implications/1]: [[basil]] -\\u003e [[bird]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+17	1	2024-09-01 04:10:07.043256	2024-09-01 04:10:07.043256	tag_implication_update	{"implication_id":5,"implication_desc":"\\"tag implication #5\\":[/tag_implications/5]: [[basil]] -\\u003e [[crow]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+18	1	2024-09-01 04:10:07.054642	2024-09-01 04:10:07.054642	tag_implication_update	{"implication_id":4,"implication_desc":"\\"tag implication #4\\":[/tag_implications/4]: [[basil]] -\\u003e [[corvus_(genus)]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+19	1	2024-09-01 04:10:07.055942	2024-09-01 04:10:07.055942	tag_implication_update	{"implication_id":2,"implication_desc":"\\"tag implication #2\\":[/tag_implications/2]: [[basil]] -\\u003e [[avian]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+20	1	2024-09-01 04:10:07.057066	2024-09-01 04:10:07.057066	tag_implication_update	{"implication_id":3,"implication_desc":"\\"tag implication #3\\":[/tag_implications/3]: [[basil]] -\\u003e [[corvid]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+21	1	2024-09-01 04:10:07.092854	2024-09-01 04:10:07.092854	tag_implication_update	{"implication_id":1,"implication_desc":"\\"tag implication #1\\":[/tag_implications/1]: [[basil]] -\\u003e [[bird]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+22	1	2024-09-01 04:10:07.27538	2024-09-01 04:10:07.27538	tag_implication_update	{"implication_id":6,"implication_desc":"\\"tag implication #6\\":[/tag_implications/6]: [[basil]] -\\u003e [[oscine]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+23	1	2024-09-01 04:10:07.306113	2024-09-01 04:10:07.306113	tag_implication_update	{"implication_id":7,"implication_desc":"\\"tag implication #7\\":[/tag_implications/7]: [[basil]] -\\u003e [[passerine]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+24	1	2024-09-01 04:10:07.312042	2024-09-01 04:10:07.312042	tag_implication_update	{"implication_id":9,"implication_desc":"\\"tag implication #9\\":[/tag_implications/9]: [[basil]] -\\u003e [[white_feathers]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+25	1	2024-09-01 04:10:07.328477	2024-09-01 04:10:07.328477	tag_implication_update	{"implication_id":8,"implication_desc":"\\"tag implication #8\\":[/tag_implications/8]: [[basil]] -\\u003e [[anthro]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+26	1	2024-09-01 04:10:07.362446	2024-09-01 04:10:07.362446	tag_implication_update	{"implication_id":6,"implication_desc":"\\"tag implication #6\\":[/tag_implications/6]: [[basil]] -\\u003e [[oscine]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+27	1	2024-09-01 04:10:07.384613	2024-09-01 04:10:07.384613	tag_implication_update	{"implication_id":9,"implication_desc":"\\"tag implication #9\\":[/tag_implications/9]: [[basil]] -\\u003e [[white_feathers]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+28	1	2024-09-01 04:10:07.386611	2024-09-01 04:10:07.386611	tag_implication_update	{"implication_id":7,"implication_desc":"\\"tag implication #7\\":[/tag_implications/7]: [[basil]] -\\u003e [[passerine]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+29	1	2024-09-01 04:10:07.405121	2024-09-01 04:10:07.405121	tag_implication_update	{"implication_id":8,"implication_desc":"\\"tag implication #8\\":[/tag_implications/8]: [[basil]] -\\u003e [[anthro]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+30	1	2024-09-01 04:13:19.072363	2024-09-01 04:13:19.072363	tag_implication_update	{"implication_id":10,"implication_desc":"\\"tag implication #10\\":[/tag_implications/10]: [[zuri]] -\\u003e [[felid]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+31	1	2024-09-01 04:13:19.160083	2024-09-01 04:13:19.160083	tag_implication_update	{"implication_id":11,"implication_desc":"\\"tag implication #11\\":[/tag_implications/11]: [[zuri]] -\\u003e [[cheetah]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+32	1	2024-09-01 04:13:19.189996	2024-09-01 04:13:19.189996	tag_implication_update	{"implication_id":12,"implication_desc":"\\"tag implication #12\\":[/tag_implications/12]: [[zuri]] -\\u003e [[feline]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+33	1	2024-09-01 04:13:19.218411	2024-09-01 04:13:19.218411	tag_implication_update	{"implication_id":13,"implication_desc":"\\"tag implication #13\\":[/tag_implications/13]: [[zuri]] -\\u003e [[felis]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+34	1	2024-09-01 04:13:19.247914	2024-09-01 04:13:19.247914	tag_implication_update	{"implication_id":14,"implication_desc":"\\"tag implication #14\\":[/tag_implications/14]: [[zuri]] -\\u003e [[mammal]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+35	1	2024-09-01 04:13:19.279347	2024-09-01 04:13:19.279347	tag_implication_update	{"implication_id":15,"implication_desc":"\\"tag implication #15\\":[/tag_implications/15]: [[zuri]] -\\u003e [[anthro]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+36	1	2024-09-01 04:13:19.309019	2024-09-01 04:13:19.309019	tag_implication_update	{"implication_id":16,"implication_desc":"\\"tag implication #16\\":[/tag_implications/16]: [[zuri]] -\\u003e [[black_body]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+37	1	2024-09-01 04:13:19.346442	2024-09-01 04:13:19.346442	tag_implication_update	{"implication_id":17,"implication_desc":"\\"tag implication #17\\":[/tag_implications/17]: [[zuri]] -\\u003e [[black_fur]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+38	1	2024-09-01 04:13:19.377074	2024-09-01 04:13:19.377074	tag_implication_update	{"implication_id":18,"implication_desc":"\\"tag implication #18\\":[/tag_implications/18]: [[zuri]] -\\u003e [[blonde_highlights]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+39	1	2024-09-01 04:13:19.405578	2024-09-01 04:13:19.405578	tag_implication_update	{"implication_id":19,"implication_desc":"\\"tag implication #19\\":[/tag_implications/19]: [[zuri]] -\\u003e [[cheek_tuft]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+40	1	2024-09-01 04:13:19.43381	2024-09-01 04:13:19.43381	tag_implication_update	{"implication_id":20,"implication_desc":"\\"tag implication #20\\":[/tag_implications/20]: [[zuri]] -\\u003e [[chest_ruft]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+41	1	2024-09-01 04:13:19.46226	2024-09-01 04:13:19.46226	tag_implication_update	{"implication_id":21,"implication_desc":"\\"tag implication #21\\":[/tag_implications/21]: [[zuri]] -\\u003e [[ear_piercing]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+42	1	2024-09-01 04:13:19.492598	2024-09-01 04:13:19.492598	tag_implication_update	{"implication_id":22,"implication_desc":"\\"tag implication #22\\":[/tag_implications/22]: [[zuri]] -\\u003e [[facial_tuft]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+43	1	2024-09-01 04:13:19.527439	2024-09-01 04:13:19.527439	tag_implication_update	{"implication_id":23,"implication_desc":"\\"tag implication #23\\":[/tag_implications/23]: [[zuri]] -\\u003e [[fur]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+44	1	2024-09-01 04:13:19.553523	2024-09-01 04:13:19.553523	tag_implication_update	{"implication_id":24,"implication_desc":"\\"tag implication #24\\":[/tag_implications/24]: [[zuri]] -\\u003e [[hair]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+45	1	2024-09-01 04:13:19.584983	2024-09-01 04:13:19.584983	tag_implication_update	{"implication_id":25,"implication_desc":"\\"tag implication #25\\":[/tag_implications/25]: [[zuri]] -\\u003e [[highlights_(coloring)]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+46	1	2024-09-01 04:13:19.612745	2024-09-01 04:13:19.612745	tag_implication_update	{"implication_id":26,"implication_desc":"\\"tag implication #26\\":[/tag_implications/26]: [[zuri]] -\\u003e [[industrial_piercing]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+47	1	2024-09-01 04:13:19.643057	2024-09-01 04:13:19.643057	tag_implication_update	{"implication_id":27,"implication_desc":"\\"tag implication #27\\":[/tag_implications/27]: [[zuri]] -\\u003e [[industrial_piercing_ladder]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+48	1	2024-09-01 04:13:19.675969	2024-09-01 04:13:19.675969	tag_implication_update	{"implication_id":28,"implication_desc":"\\"tag implication #28\\":[/tag_implications/28]: [[zuri]] -\\u003e [[inner_ear_fluff]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+49	1	2024-09-01 04:13:19.733353	2024-09-01 04:13:19.733353	tag_implication_update	{"implication_id":29,"implication_desc":"\\"tag implication #29\\":[/tag_implications/29]: [[zuri]] -\\u003e [[male]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+50	1	2024-09-01 04:13:19.810552	2024-09-01 04:13:19.810552	tag_implication_update	{"implication_id":30,"implication_desc":"\\"tag implication #30\\":[/tag_implications/30]: [[zuri]] -\\u003e [[markings]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+51	1	2024-09-01 04:13:19.840744	2024-09-01 04:13:19.840744	tag_implication_update	{"implication_id":31,"implication_desc":"\\"tag implication #31\\":[/tag_implications/31]: [[zuri]] -\\u003e [[piercing]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+52	1	2024-09-01 04:13:19.868976	2024-09-01 04:13:19.868976	tag_implication_update	{"implication_id":32,"implication_desc":"\\"tag implication #32\\":[/tag_implications/32]: [[zuri]] -\\u003e [[spots]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+53	1	2024-09-01 04:13:19.897736	2024-09-01 04:13:19.897736	tag_implication_update	{"implication_id":33,"implication_desc":"\\"tag implication #33\\":[/tag_implications/33]: [[zuri]] -\\u003e [[spotted_body]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+54	1	2024-09-01 04:13:19.925822	2024-09-01 04:13:19.925822	tag_implication_update	{"implication_id":34,"implication_desc":"\\"tag implication #34\\":[/tag_implications/34]: [[zuri]] -\\u003e [[spotted_fur]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+55	1	2024-09-01 04:13:19.951056	2024-09-01 04:13:19.951056	tag_implication_update	{"implication_id":35,"implication_desc":"\\"tag implication #35\\":[/tag_implications/35]: [[zuri]] -\\u003e [[tail]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+56	1	2024-09-01 04:13:19.978851	2024-09-01 04:13:19.978851	tag_implication_update	{"implication_id":36,"implication_desc":"\\"tag implication #36\\":[/tag_implications/36]: [[zuri]] -\\u003e [[tongue]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+57	1	2024-09-01 04:13:20.004943	2024-09-01 04:13:20.004943	tag_implication_update	{"implication_id":37,"implication_desc":"\\"tag implication #37\\":[/tag_implications/37]: [[zuri]] -\\u003e [[tongue_out]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+58	1	2024-09-01 04:13:20.038765	2024-09-01 04:13:20.038765	tag_implication_update	{"implication_id":38,"implication_desc":"\\"tag implication #38\\":[/tag_implications/38]: [[zuri]] -\\u003e [[tuft]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+59	1	2024-09-01 04:13:20.065269	2024-09-01 04:13:20.065269	tag_implication_update	{"implication_id":39,"implication_desc":"\\"tag implication #39\\":[/tag_implications/39]: [[zuri]] -\\u003e [[white_body]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+60	1	2024-09-01 04:13:20.090671	2024-09-01 04:13:20.090671	tag_implication_update	{"implication_id":40,"implication_desc":"\\"tag implication #40\\":[/tag_implications/40]: [[zuri]] -\\u003e [[white_fur]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+61	1	2024-09-01 04:13:20.116698	2024-09-01 04:13:20.116698	tag_implication_update	{"implication_id":41,"implication_desc":"\\"tag implication #41\\":[/tag_implications/41]: [[serene_form]] -\\u003e [[blue_eyes]]","change_desc":"changed status from \\"pending\\" to \\"queued\\", set approver_id to \\"1\\""}
+62	1	2024-09-01 04:13:36.186985	2024-09-01 04:13:36.186985	tag_implication_update	{"implication_id":26,"implication_desc":"\\"tag implication #26\\":[/tag_implications/26]: [[zuri]] -\\u003e [[industrial_piercing]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+67	1	2024-09-01 04:13:36.237277	2024-09-01 04:13:36.237277	tag_implication_update	{"implication_id":26,"implication_desc":"\\"tag implication #26\\":[/tag_implications/26]: [[zuri]] -\\u003e [[industrial_piercing]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+82	1	2024-09-01 04:13:41.813674	2024-09-01 04:13:41.813674	tag_implication_update	{"implication_id":30,"implication_desc":"\\"tag implication #30\\":[/tag_implications/30]: [[zuri]] -\\u003e [[markings]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+87	1	2024-09-01 04:13:41.874319	2024-09-01 04:13:41.874319	tag_implication_update	{"implication_id":30,"implication_desc":"\\"tag implication #30\\":[/tag_implications/30]: [[zuri]] -\\u003e [[markings]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+88	1	2024-09-01 04:13:42.036469	2024-09-01 04:13:42.036469	tag_implication_update	{"implication_id":23,"implication_desc":"\\"tag implication #23\\":[/tag_implications/23]: [[zuri]] -\\u003e [[fur]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+93	1	2024-09-01 04:13:42.081876	2024-09-01 04:13:42.081876	tag_implication_update	{"implication_id":23,"implication_desc":"\\"tag implication #23\\":[/tag_implications/23]: [[zuri]] -\\u003e [[fur]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+100	1	2024-09-01 04:13:42.326398	2024-09-01 04:13:42.326398	tag_implication_update	{"implication_id":18,"implication_desc":"\\"tag implication #18\\":[/tag_implications/18]: [[zuri]] -\\u003e [[blonde_highlights]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+106	1	2024-09-01 04:13:42.389436	2024-09-01 04:13:42.389436	tag_implication_update	{"implication_id":18,"implication_desc":"\\"tag implication #18\\":[/tag_implications/18]: [[zuri]] -\\u003e [[blonde_highlights]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+109	1	2024-09-01 04:13:42.517404	2024-09-01 04:13:42.517404	tag_implication_update	{"implication_id":14,"implication_desc":"\\"tag implication #14\\":[/tag_implications/14]: [[zuri]] -\\u003e [[mammal]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+112	1	2024-09-01 04:13:42.538451	2024-09-01 04:13:42.538451	tag_implication_update	{"implication_id":14,"implication_desc":"\\"tag implication #14\\":[/tag_implications/14]: [[zuri]] -\\u003e [[mammal]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+117	1	2024-09-01 04:13:46.510971	2024-09-01 04:13:46.510971	tag_implication_update	{"implication_id":12,"implication_desc":"\\"tag implication #12\\":[/tag_implications/12]: [[zuri]] -\\u003e [[feline]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+123	1	2024-09-01 04:13:46.565306	2024-09-01 04:13:46.565306	tag_implication_update	{"implication_id":12,"implication_desc":"\\"tag implication #12\\":[/tag_implications/12]: [[zuri]] -\\u003e [[feline]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+124	1	2024-09-01 04:13:46.588314	2024-09-01 04:13:46.588314	tag_implication_update	{"implication_id":13,"implication_desc":"\\"tag implication #13\\":[/tag_implications/13]: [[zuri]] -\\u003e [[felis]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+125	1	2024-09-01 04:13:46.599681	2024-09-01 04:13:46.599681	tag_implication_update	{"implication_id":13,"implication_desc":"\\"tag implication #13\\":[/tag_implications/13]: [[zuri]] -\\u003e [[felis]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+63	1	2024-09-01 04:13:36.193622	2024-09-01 04:13:36.193622	tag_implication_update	{"implication_id":27,"implication_desc":"\\"tag implication #27\\":[/tag_implications/27]: [[zuri]] -\\u003e [[industrial_piercing_ladder]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+69	1	2024-09-01 04:13:36.254973	2024-09-01 04:13:36.254973	tag_implication_update	{"implication_id":27,"implication_desc":"\\"tag implication #27\\":[/tag_implications/27]: [[zuri]] -\\u003e [[industrial_piercing_ladder]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+74	1	2024-09-01 04:13:36.388825	2024-09-01 04:13:36.388825	tag_implication_update	{"implication_id":31,"implication_desc":"\\"tag implication #31\\":[/tag_implications/31]: [[zuri]] -\\u003e [[piercing]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+77	1	2024-09-01 04:13:36.416019	2024-09-01 04:13:36.416019	tag_implication_update	{"implication_id":31,"implication_desc":"\\"tag implication #31\\":[/tag_implications/31]: [[zuri]] -\\u003e [[piercing]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+78	1	2024-09-01 04:13:41.776422	2024-09-01 04:13:41.776422	tag_implication_update	{"implication_id":41,"implication_desc":"\\"tag implication #41\\":[/tag_implications/41]: [[serene_form]] -\\u003e [[blue_eyes]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+84	1	2024-09-01 04:13:41.841309	2024-09-01 04:13:41.841309	tag_implication_update	{"implication_id":41,"implication_desc":"\\"tag implication #41\\":[/tag_implications/41]: [[serene_form]] -\\u003e [[blue_eyes]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+92	1	2024-09-01 04:13:42.075188	2024-09-01 04:13:42.075188	tag_implication_update	{"implication_id":17,"implication_desc":"\\"tag implication #17\\":[/tag_implications/17]: [[zuri]] -\\u003e [[black_fur]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+97	1	2024-09-01 04:13:42.131435	2024-09-01 04:13:42.131435	tag_implication_update	{"implication_id":17,"implication_desc":"\\"tag implication #17\\":[/tag_implications/17]: [[zuri]] -\\u003e [[black_fur]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+98	1	2024-09-01 04:13:42.280684	2024-09-01 04:13:42.280684	tag_implication_update	{"implication_id":21,"implication_desc":"\\"tag implication #21\\":[/tag_implications/21]: [[zuri]] -\\u003e [[ear_piercing]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+102	1	2024-09-01 04:13:42.342763	2024-09-01 04:13:42.342763	tag_implication_update	{"implication_id":21,"implication_desc":"\\"tag implication #21\\":[/tag_implications/21]: [[zuri]] -\\u003e [[ear_piercing]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+118	1	2024-09-01 04:13:46.513431	2024-09-01 04:13:46.513431	tag_implication_update	{"implication_id":36,"implication_desc":"\\"tag implication #36\\":[/tag_implications/36]: [[zuri]] -\\u003e [[tongue]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+122	1	2024-09-01 04:13:46.564111	2024-09-01 04:13:46.564111	tag_implication_update	{"implication_id":36,"implication_desc":"\\"tag implication #36\\":[/tag_implications/36]: [[zuri]] -\\u003e [[tongue]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+64	1	2024-09-01 04:13:36.200054	2024-09-01 04:13:36.200054	tag_implication_update	{"implication_id":37,"implication_desc":"\\"tag implication #37\\":[/tag_implications/37]: [[zuri]] -\\u003e [[tongue_out]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+68	1	2024-09-01 04:13:36.246069	2024-09-01 04:13:36.246069	tag_implication_update	{"implication_id":37,"implication_desc":"\\"tag implication #37\\":[/tag_implications/37]: [[zuri]] -\\u003e [[tongue_out]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+80	1	2024-09-01 04:13:41.806557	2024-09-01 04:13:41.806557	tag_implication_update	{"implication_id":24,"implication_desc":"\\"tag implication #24\\":[/tag_implications/24]: [[zuri]] -\\u003e [[hair]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+85	1	2024-09-01 04:13:41.852418	2024-09-01 04:13:41.852418	tag_implication_update	{"implication_id":24,"implication_desc":"\\"tag implication #24\\":[/tag_implications/24]: [[zuri]] -\\u003e [[hair]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+90	1	2024-09-01 04:13:42.056945	2024-09-01 04:13:42.056945	tag_implication_update	{"implication_id":10,"implication_desc":"\\"tag implication #10\\":[/tag_implications/10]: [[zuri]] -\\u003e [[felid]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+94	1	2024-09-01 04:13:42.104299	2024-09-01 04:13:42.104299	tag_implication_update	{"implication_id":10,"implication_desc":"\\"tag implication #10\\":[/tag_implications/10]: [[zuri]] -\\u003e [[felid]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+101	1	2024-09-01 04:13:42.330961	2024-09-01 04:13:42.330961	tag_implication_update	{"implication_id":38,"implication_desc":"\\"tag implication #38\\":[/tag_implications/38]: [[zuri]] -\\u003e [[tuft]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+105	1	2024-09-01 04:13:42.388334	2024-09-01 04:13:42.388334	tag_implication_update	{"implication_id":38,"implication_desc":"\\"tag implication #38\\":[/tag_implications/38]: [[zuri]] -\\u003e [[tuft]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+110	1	2024-09-01 04:13:42.5191	2024-09-01 04:13:42.5191	tag_implication_update	{"implication_id":15,"implication_desc":"\\"tag implication #15\\":[/tag_implications/15]: [[zuri]] -\\u003e [[anthro]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+113	1	2024-09-01 04:13:42.54053	2024-09-01 04:13:42.54053	tag_implication_update	{"implication_id":15,"implication_desc":"\\"tag implication #15\\":[/tag_implications/15]: [[zuri]] -\\u003e [[anthro]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+114	1	2024-09-01 04:13:46.487641	2024-09-01 04:13:46.487641	tag_implication_update	{"implication_id":34,"implication_desc":"\\"tag implication #34\\":[/tag_implications/34]: [[zuri]] -\\u003e [[spotted_fur]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+119	1	2024-09-01 04:13:46.541738	2024-09-01 04:13:46.541738	tag_implication_update	{"implication_id":34,"implication_desc":"\\"tag implication #34\\":[/tag_implications/34]: [[zuri]] -\\u003e [[spotted_fur]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+65	1	2024-09-01 04:13:36.215553	2024-09-01 04:13:36.215553	tag_implication_update	{"implication_id":32,"implication_desc":"\\"tag implication #32\\":[/tag_implications/32]: [[zuri]] -\\u003e [[spots]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+71	1	2024-09-01 04:13:36.285813	2024-09-01 04:13:36.285813	tag_implication_update	{"implication_id":32,"implication_desc":"\\"tag implication #32\\":[/tag_implications/32]: [[zuri]] -\\u003e [[spots]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+72	1	2024-09-01 04:13:36.381856	2024-09-01 04:13:36.381856	tag_implication_update	{"implication_id":39,"implication_desc":"\\"tag implication #39\\":[/tag_implications/39]: [[zuri]] -\\u003e [[white_body]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+75	1	2024-09-01 04:13:36.409275	2024-09-01 04:13:36.409275	tag_implication_update	{"implication_id":39,"implication_desc":"\\"tag implication #39\\":[/tag_implications/39]: [[zuri]] -\\u003e [[white_body]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+79	1	2024-09-01 04:13:41.784595	2024-09-01 04:13:41.784595	tag_implication_update	{"implication_id":19,"implication_desc":"\\"tag implication #19\\":[/tag_implications/19]: [[zuri]] -\\u003e [[cheek_tuft]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+83	1	2024-09-01 04:13:41.837774	2024-09-01 04:13:41.837774	tag_implication_update	{"implication_id":19,"implication_desc":"\\"tag implication #19\\":[/tag_implications/19]: [[zuri]] -\\u003e [[cheek_tuft]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+91	1	2024-09-01 04:13:42.066337	2024-09-01 04:13:42.066337	tag_implication_update	{"implication_id":11,"implication_desc":"\\"tag implication #11\\":[/tag_implications/11]: [[zuri]] -\\u003e [[cheetah]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+96	1	2024-09-01 04:13:42.122945	2024-09-01 04:13:42.122945	tag_implication_update	{"implication_id":11,"implication_desc":"\\"tag implication #11\\":[/tag_implications/11]: [[zuri]] -\\u003e [[cheetah]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+103	1	2024-09-01 04:13:42.344773	2024-09-01 04:13:42.344773	tag_implication_update	{"implication_id":29,"implication_desc":"\\"tag implication #29\\":[/tag_implications/29]: [[zuri]] -\\u003e [[male]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+107	1	2024-09-01 04:13:42.403824	2024-09-01 04:13:42.403824	tag_implication_update	{"implication_id":29,"implication_desc":"\\"tag implication #29\\":[/tag_implications/29]: [[zuri]] -\\u003e [[male]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+108	1	2024-09-01 04:13:42.493451	2024-09-01 04:13:42.493451	tag_implication_update	{"implication_id":20,"implication_desc":"\\"tag implication #20\\":[/tag_implications/20]: [[zuri]] -\\u003e [[chest_ruft]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+111	1	2024-09-01 04:13:42.522897	2024-09-01 04:13:42.522897	tag_implication_update	{"implication_id":20,"implication_desc":"\\"tag implication #20\\":[/tag_implications/20]: [[zuri]] -\\u003e [[chest_ruft]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+116	1	2024-09-01 04:13:46.499837	2024-09-01 04:13:46.499837	tag_implication_update	{"implication_id":22,"implication_desc":"\\"tag implication #22\\":[/tag_implications/22]: [[zuri]] -\\u003e [[facial_tuft]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+120	1	2024-09-01 04:13:46.543454	2024-09-01 04:13:46.543454	tag_implication_update	{"implication_id":22,"implication_desc":"\\"tag implication #22\\":[/tag_implications/22]: [[zuri]] -\\u003e [[facial_tuft]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+66	1	2024-09-01 04:13:36.218389	2024-09-01 04:13:36.218389	tag_implication_update	{"implication_id":35,"implication_desc":"\\"tag implication #35\\":[/tag_implications/35]: [[zuri]] -\\u003e [[tail]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+70	1	2024-09-01 04:13:36.270862	2024-09-01 04:13:36.270862	tag_implication_update	{"implication_id":35,"implication_desc":"\\"tag implication #35\\":[/tag_implications/35]: [[zuri]] -\\u003e [[tail]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+73	1	2024-09-01 04:13:36.38591	2024-09-01 04:13:36.38591	tag_implication_update	{"implication_id":40,"implication_desc":"\\"tag implication #40\\":[/tag_implications/40]: [[zuri]] -\\u003e [[white_fur]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+76	1	2024-09-01 04:13:36.413233	2024-09-01 04:13:36.413233	tag_implication_update	{"implication_id":40,"implication_desc":"\\"tag implication #40\\":[/tag_implications/40]: [[zuri]] -\\u003e [[white_fur]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+81	1	2024-09-01 04:13:41.807678	2024-09-01 04:13:41.807678	tag_implication_update	{"implication_id":16,"implication_desc":"\\"tag implication #16\\":[/tag_implications/16]: [[zuri]] -\\u003e [[black_body]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+86	1	2024-09-01 04:13:41.865634	2024-09-01 04:13:41.865634	tag_implication_update	{"implication_id":16,"implication_desc":"\\"tag implication #16\\":[/tag_implications/16]: [[zuri]] -\\u003e [[black_body]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+89	1	2024-09-01 04:13:42.046064	2024-09-01 04:13:42.046064	tag_implication_update	{"implication_id":25,"implication_desc":"\\"tag implication #25\\":[/tag_implications/25]: [[zuri]] -\\u003e [[highlights_(coloring)]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+95	1	2024-09-01 04:13:42.121583	2024-09-01 04:13:42.121583	tag_implication_update	{"implication_id":25,"implication_desc":"\\"tag implication #25\\":[/tag_implications/25]: [[zuri]] -\\u003e [[highlights_(coloring)]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+99	1	2024-09-01 04:13:42.317372	2024-09-01 04:13:42.317372	tag_implication_update	{"implication_id":33,"implication_desc":"\\"tag implication #33\\":[/tag_implications/33]: [[zuri]] -\\u003e [[spotted_body]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+104	1	2024-09-01 04:13:42.386368	2024-09-01 04:13:42.386368	tag_implication_update	{"implication_id":33,"implication_desc":"\\"tag implication #33\\":[/tag_implications/33]: [[zuri]] -\\u003e [[spotted_body]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
+115	1	2024-09-01 04:13:46.491497	2024-09-01 04:13:46.491497	tag_implication_update	{"implication_id":28,"implication_desc":"\\"tag implication #28\\":[/tag_implications/28]: [[zuri]] -\\u003e [[inner_ear_fluff]]","change_desc":"changed status from \\"queued\\" to \\"processing\\""}
+121	1	2024-09-01 04:13:46.550294	2024-09-01 04:13:46.550294	tag_implication_update	{"implication_id":28,"implication_desc":"\\"tag implication #28\\":[/tag_implications/28]: [[zuri]] -\\u003e [[inner_ear_fluff]]","change_desc":"changed status from \\"processing\\" to \\"active\\""}
 \.
 
 
@@ -3497,6 +3630,7 @@ COPY public.post_sets (id, name, shortname, description, is_public, transfer_on_
 --
 
 COPY public.post_versions (id, post_id, tags, added_tags, removed_tags, locked_tags, added_locked_tags, removed_locked_tags, updater_id, updater_ip_addr, updated_at, rating, rating_changed, parent_id, parent_changed, source, source_changed, description, description_changed, version, reason) FROM stdin;
+1	1	anthro avian basil bird black_body black_fur blonde_highlights blue_eyes blushing chair_position cheek_tuft cheetah chest_ruft corvid corvus_(genus) crow dominant_bottom duo ear_piercing facial_tuft felid feline felis fur hair hi_res highlights_(coloring) industrial_piercing industrial_piercing_ladder inner_ear_fluff male male/male mammal markings oscine passerine penetration piercing serene_form spots spotted_body spotted_fur starselle tail tongue tongue_out tuft white_body white_feathers white_fur zuri	{anthro,avian,basil,bird,black_body,black_fur,blonde_highlights,blue_eyes,blushing,chair_position,cheek_tuft,cheetah,chest_ruft,corvid,corvus_(genus),crow,dominant_bottom,duo,ear_piercing,facial_tuft,felid,feline,felis,fur,hair,hi_res,highlights_(coloring),industrial_piercing,industrial_piercing_ladder,inner_ear_fluff,male,male/male,mammal,markings,oscine,passerine,penetration,piercing,serene_form,spots,spotted_body,spotted_fur,starselle,tail,tongue,tongue_out,tuft,white_body,white_feathers,white_fur,zuri}	{}	\N	{}	{}	1	172.19.0.1	2024-09-01 04:15:54.050054	e	t	\N	t		t		t	1	\N
 \.
 
 
@@ -3513,6 +3647,7 @@ COPY public.post_votes (id, post_id, user_id, score, created_at, updated_at, use
 --
 
 COPY public.posts (id, created_at, updated_at, up_score, down_score, score, source, md5, rating, is_note_locked, is_rating_locked, is_status_locked, is_pending, is_flagged, is_deleted, uploader_id, uploader_ip_addr, approver_id, fav_string, pool_string, last_noted_at, last_comment_bumped_at, fav_count, tag_string, tag_count, tag_count_general, tag_count_artist, tag_count_character, tag_count_copyright, file_ext, file_size, image_width, image_height, parent_id, has_children, last_commented_at, has_active_children, bit_flags, tag_count_meta, locked_tags, tag_count_species, tag_count_invalid, description, comment_count, change_seq, tag_count_lore, bg_color, generated_samples, duration, is_comment_disabled) FROM stdin;
+1	2024-09-01 04:15:54.024047	2024-09-01 04:15:54.024047	0	0	0		93dabc87fc19755e89e8510a35e4dfc6	e	f	f	f	f	f	f	1	172.19.0.1	\N			\N	\N	0	anthro avian basil bird black_body black_fur blonde_highlights blue_eyes blushing chair_position cheek_tuft cheetah chest_ruft corvid corvus_(genus) crow dominant_bottom duo ear_piercing facial_tuft felid feline felis fur hair hi_res highlights_(coloring) industrial_piercing industrial_piercing_ladder inner_ear_fluff male male/male mammal markings oscine passerine penetration piercing serene_form spots spotted_body spotted_fur starselle tail tongue tongue_out tuft white_body white_feathers white_fur zuri	51	50	1	0	0	png	2186647	1900	1500	\N	f	\N	f	2	0	\N	0	0		0	1	0	\N	\N	\N	f
 \.
 
 
@@ -3819,6 +3954,47 @@ COPY public.tag_aliases (id, antecedent_name, consequent_name, creator_id, creat
 --
 
 COPY public.tag_implications (id, antecedent_name, consequent_name, creator_id, creator_ip_addr, forum_topic_id, status, created_at, updated_at, approver_id, forum_post_id, descendant_names, reason) FROM stdin;
+20	zuri	chest_ruft	1	127.0.0.1	\N	active	2024-09-01 04:13:19.420338	2024-09-01 04:13:42.520389	1	\N	{chest_ruft}	
+14	zuri	mammal	1	127.0.0.1	\N	active	2024-09-01 04:13:19.232243	2024-09-01 04:13:42.535464	1	\N	{mammal}	
+5	basil	crow	1	127.0.0.1	\N	active	2024-09-01 04:10:06.150482	2024-09-01 04:10:07.029524	1	\N	{crow}	
+3	basil	corvid	1	127.0.0.1	\N	active	2024-09-01 04:10:06.072733	2024-09-01 04:10:07.041801	1	\N	{corvid}	
+4	basil	corvus_(genus)	1	127.0.0.1	\N	active	2024-09-01 04:10:06.116498	2024-09-01 04:10:07.045288	1	\N	{corvus_(genus)}	
+2	basil	avian	1	127.0.0.1	\N	active	2024-09-01 04:10:06.025145	2024-09-01 04:10:07.046496	1	\N	{avian}	
+1	basil	bird	1	127.0.0.1	\N	active	2024-09-01 04:10:05.882578	2024-09-01 04:10:07.081544	1	\N	{bird}	
+15	zuri	anthro	1	127.0.0.1	\N	active	2024-09-01 04:13:19.265843	2024-09-01 04:13:42.537627	1	\N	{anthro}	
+23	zuri	fur	1	127.0.0.1	\N	active	2024-09-01 04:13:19.515905	2024-09-01 04:13:42.074271	1	\N	{fur}	
+6	basil	oscine	1	127.0.0.1	\N	active	2024-09-01 04:10:06.198778	2024-09-01 04:10:07.356373	1	\N	{oscine}	
+9	basil	white_feathers	1	127.0.0.1	\N	active	2024-09-01 04:10:06.311677	2024-09-01 04:10:07.364248	1	\N	{white_feathers}	
+7	basil	passerine	1	127.0.0.1	\N	active	2024-09-01 04:10:06.234022	2024-09-01 04:10:07.376456	1	\N	{passerine}	
+8	basil	anthro	1	127.0.0.1	\N	active	2024-09-01 04:10:06.267108	2024-09-01 04:10:07.390082	1	\N	{anthro}	
+10	zuri	felid	1	127.0.0.1	\N	active	2024-09-01 04:13:19.02232	2024-09-01 04:13:42.094413	1	\N	{felid}	
+22	zuri	facial_tuft	1	127.0.0.1	\N	active	2024-09-01 04:13:19.479639	2024-09-01 04:13:46.536527	1	\N	{facial_tuft}	
+28	zuri	inner_ear_fluff	1	127.0.0.1	\N	active	2024-09-01 04:13:19.663439	2024-09-01 04:13:46.542513	1	\N	{inner_ear_fluff}	
+11	zuri	cheetah	1	127.0.0.1	\N	active	2024-09-01 04:13:19.146534	2024-09-01 04:13:42.110336	1	\N	{cheetah}	
+25	zuri	highlights_(coloring)	1	127.0.0.1	\N	active	2024-09-01 04:13:19.569759	2024-09-01 04:13:42.111279	1	\N	{highlights_(coloring)}	
+17	zuri	black_fur	1	127.0.0.1	\N	active	2024-09-01 04:13:19.327935	2024-09-01 04:13:42.123983	1	\N	{black_fur}	
+12	zuri	feline	1	127.0.0.1	\N	active	2024-09-01 04:13:19.178117	2024-09-01 04:13:46.559444	1	\N	{feline}	
+13	zuri	felis	1	127.0.0.1	\N	active	2024-09-01 04:13:19.206854	2024-09-01 04:13:46.597863	1	\N	{felis}	
+26	zuri	industrial_piercing	1	127.0.0.1	\N	active	2024-09-01 04:13:19.601529	2024-09-01 04:13:36.230175	1	\N	{industrial_piercing}	
+27	zuri	industrial_piercing_ladder	1	127.0.0.1	\N	active	2024-09-01 04:13:19.632188	2024-09-01 04:13:36.240801	1	\N	{industrial_piercing_ladder}	
+32	zuri	spots	1	127.0.0.1	\N	active	2024-09-01 04:13:19.856577	2024-09-01 04:13:36.281058	1	\N	{spots}	
+21	zuri	ear_piercing	1	127.0.0.1	\N	active	2024-09-01 04:13:19.451001	2024-09-01 04:13:42.322091	1	\N	{ear_piercing}	
+31	zuri	piercing	1	127.0.0.1	\N	active	2024-09-01 04:13:19.8285	2024-09-01 04:13:36.41111	1	\N	{piercing}	
+33	zuri	spotted_body	1	127.0.0.1	\N	active	2024-09-01 04:13:19.884606	2024-09-01 04:13:42.37633	1	\N	{spotted_body}	
+18	zuri	blonde_highlights	1	127.0.0.1	\N	active	2024-09-01 04:13:19.363398	2024-09-01 04:13:42.379263	1	\N	{blonde_highlights}	
+29	zuri	male	1	127.0.0.1	\N	active	2024-09-01 04:13:19.691462	2024-09-01 04:13:42.391516	1	\N	{male}	
+19	zuri	cheek_tuft	1	127.0.0.1	\N	active	2024-09-01 04:13:19.39509	2024-09-01 04:13:41.827969	1	\N	{cheek_tuft}	
+24	zuri	hair	1	127.0.0.1	\N	active	2024-09-01 04:13:19.542177	2024-09-01 04:13:41.844391	1	\N	{hair}	
+16	zuri	black_body	1	127.0.0.1	\N	active	2024-09-01 04:13:19.295333	2024-09-01 04:13:41.857706	1	\N	{black_body}	
+30	zuri	markings	1	127.0.0.1	\N	active	2024-09-01 04:13:19.797564	2024-09-01 04:13:41.8677	1	\N	{markings}	
+37	zuri	tongue_out	1	127.0.0.1	\N	active	2024-09-01 04:13:19.994504	2024-09-01 04:13:36.240059	1	\N	{tongue_out}	
+35	zuri	tail	1	127.0.0.1	\N	active	2024-09-01 04:13:19.940462	2024-09-01 04:13:36.261879	1	\N	{tail}	
+39	zuri	white_body	1	127.0.0.1	\N	active	2024-09-01 04:13:20.053537	2024-09-01 04:13:36.404459	1	\N	{white_body}	
+40	zuri	white_fur	1	127.0.0.1	\N	active	2024-09-01 04:13:20.079946	2024-09-01 04:13:36.407594	1	\N	{white_fur}	
+41	serene_form	blue_eyes	1	127.0.0.1	\N	active	2024-09-01 04:13:20.106242	2024-09-01 04:13:41.829561	1	\N	{blue_eyes}	
+38	zuri	tuft	1	127.0.0.1	\N	active	2024-09-01 04:13:20.02431	2024-09-01 04:13:42.378404	1	\N	{tuft}	
+34	zuri	spotted_fur	1	127.0.0.1	\N	active	2024-09-01 04:13:19.914249	2024-09-01 04:13:46.533876	1	\N	{spotted_fur}	
+36	zuri	tongue	1	127.0.0.1	\N	active	2024-09-01 04:13:19.964647	2024-09-01 04:13:46.558371	1	\N	{tongue}	
 \.
 
 
@@ -3843,6 +4019,58 @@ COPY public.tag_type_versions (id, created_at, updated_at, old_type, new_type, i
 --
 
 COPY public.tags (id, name, post_count, category, related_tags, related_tags_updated_at, created_at, updated_at, is_locked) FROM stdin;
+45	starsie	0	1	\N	\N	2024-09-01 04:14:31.233527	2024-09-01 04:14:31.233527	f
+1	basil	1	0	\N	\N	2024-09-01 04:10:03.246774	2024-09-01 04:10:03.246774	f
+2	bird	1	0	\N	\N	2024-09-01 04:10:03.255948	2024-09-01 04:10:03.255948	f
+3	avian	1	0	\N	\N	2024-09-01 04:10:03.305934	2024-09-01 04:10:03.305934	f
+4	corvid	1	0	\N	\N	2024-09-01 04:10:03.335303	2024-09-01 04:10:03.335303	f
+5	corvus_(genus)	1	0	\N	\N	2024-09-01 04:10:03.372608	2024-09-01 04:10:03.372608	f
+6	crow	1	0	\N	\N	2024-09-01 04:10:03.40164	2024-09-01 04:10:03.40164	f
+7	oscine	1	0	\N	\N	2024-09-01 04:10:03.42197	2024-09-01 04:10:03.42197	f
+8	passerine	1	0	\N	\N	2024-09-01 04:10:03.442101	2024-09-01 04:10:03.442101	f
+9	anthro	1	0	\N	\N	2024-09-01 04:10:03.464472	2024-09-01 04:10:03.464472	f
+10	white_feathers	1	0	\N	\N	2024-09-01 04:10:03.500635	2024-09-01 04:10:03.500635	f
+11	zuri	1	0	\N	\N	2024-09-01 04:13:16.410676	2024-09-01 04:13:16.410676	f
+12	felid	1	0	\N	\N	2024-09-01 04:13:16.415795	2024-09-01 04:13:16.415795	f
+13	cheetah	1	0	\N	\N	2024-09-01 04:13:16.428936	2024-09-01 04:13:16.428936	f
+14	feline	1	0	\N	\N	2024-09-01 04:13:16.441388	2024-09-01 04:13:16.441388	f
+15	felis	1	0	\N	\N	2024-09-01 04:13:16.453479	2024-09-01 04:13:16.453479	f
+16	mammal	1	0	\N	\N	2024-09-01 04:13:16.46498	2024-09-01 04:13:16.46498	f
+17	black_body	1	0	\N	\N	2024-09-01 04:13:16.490501	2024-09-01 04:13:16.490501	f
+18	black_fur	1	0	\N	\N	2024-09-01 04:13:16.502694	2024-09-01 04:13:16.502694	f
+19	blonde_highlights	1	0	\N	\N	2024-09-01 04:13:16.514106	2024-09-01 04:13:16.514106	f
+20	cheek_tuft	1	0	\N	\N	2024-09-01 04:13:16.527097	2024-09-01 04:13:16.527097	f
+21	chest_ruft	1	0	\N	\N	2024-09-01 04:13:16.54014	2024-09-01 04:13:16.54014	f
+22	ear_piercing	1	0	\N	\N	2024-09-01 04:13:16.551403	2024-09-01 04:13:16.551403	f
+23	facial_tuft	1	0	\N	\N	2024-09-01 04:13:16.563235	2024-09-01 04:13:16.563235	f
+24	fur	1	0	\N	\N	2024-09-01 04:13:16.58192	2024-09-01 04:13:16.58192	f
+25	hair	1	0	\N	\N	2024-09-01 04:13:16.594606	2024-09-01 04:13:16.594606	f
+26	highlights_(coloring)	1	0	\N	\N	2024-09-01 04:13:16.605708	2024-09-01 04:13:16.605708	f
+27	industrial_piercing	1	0	\N	\N	2024-09-01 04:13:16.616974	2024-09-01 04:13:16.616974	f
+28	industrial_piercing_ladder	1	0	\N	\N	2024-09-01 04:13:16.628625	2024-09-01 04:13:16.628625	f
+29	inner_ear_fluff	1	0	\N	\N	2024-09-01 04:13:16.640991	2024-09-01 04:13:16.640991	f
+30	male	1	0	\N	\N	2024-09-01 04:13:16.655835	2024-09-01 04:13:16.655835	f
+31	markings	1	0	\N	\N	2024-09-01 04:13:16.672714	2024-09-01 04:13:16.672714	f
+32	piercing	1	0	\N	\N	2024-09-01 04:13:16.685807	2024-09-01 04:13:16.685807	f
+33	spots	1	0	\N	\N	2024-09-01 04:13:16.69779	2024-09-01 04:13:16.69779	f
+34	spotted_body	1	0	\N	\N	2024-09-01 04:13:16.708482	2024-09-01 04:13:16.708482	f
+35	spotted_fur	1	0	\N	\N	2024-09-01 04:13:16.720239	2024-09-01 04:13:16.720239	f
+36	tail	1	0	\N	\N	2024-09-01 04:13:16.730176	2024-09-01 04:13:16.730176	f
+37	tongue	1	0	\N	\N	2024-09-01 04:13:16.739602	2024-09-01 04:13:16.739602	f
+38	tongue_out	1	0	\N	\N	2024-09-01 04:13:16.751359	2024-09-01 04:13:16.751359	f
+39	tuft	1	0	\N	\N	2024-09-01 04:13:16.762596	2024-09-01 04:13:16.762596	f
+40	white_body	1	0	\N	\N	2024-09-01 04:13:16.775128	2024-09-01 04:13:16.775128	f
+41	white_fur	1	0	\N	\N	2024-09-01 04:13:16.7874	2024-09-01 04:13:16.7874	f
+42	serene_form	1	0	\N	\N	2024-09-01 04:13:16.799026	2024-09-01 04:13:16.799026	f
+43	blue_eyes	1	0	\N	\N	2024-09-01 04:13:16.802333	2024-09-01 04:13:16.802333	f
+44	starselle	1	1	\N	\N	2024-09-01 04:14:23.914524	2024-09-01 04:14:23.914524	f
+46	chair_position	1	0	\N	\N	2024-09-01 04:15:53.979974	2024-09-01 04:15:53.979974	f
+47	duo	1	0	\N	\N	2024-09-01 04:15:53.987904	2024-09-01 04:15:53.987904	f
+48	male/male	1	0	\N	\N	2024-09-01 04:15:53.989977	2024-09-01 04:15:53.989977	f
+49	penetration	1	0	\N	\N	2024-09-01 04:15:53.992044	2024-09-01 04:15:53.992044	f
+50	dominant_bottom	1	0	\N	\N	2024-09-01 04:15:53.994002	2024-09-01 04:15:53.994002	f
+51	blushing	1	0	\N	\N	2024-09-01 04:15:53.996135	2024-09-01 04:15:53.996135	f
+52	hi_res	1	0	\N	\N	2024-09-01 04:15:53.99804	2024-09-01 04:15:53.99804	f
 \.
 
 
@@ -3867,7 +4095,7 @@ COPY public.tickets (id, creator_id, creator_ip_addr, disp_id, qtype, status, re
 --
 
 COPY public.upload_whitelists (id, pattern, note, reason, allowed, hidden, created_at, updated_at) FROM stdin;
-1	https://static1.e621.net/*	\N	\N	t	f	2024-09-01 03:45:33.92007	2024-09-01 03:45:33.92007
+1	https://static1.e621.net/*	\N	\N	t	f	2024-09-01 04:05:18.55095	2024-09-01 04:05:18.55095
 \.
 
 
@@ -3876,6 +4104,7 @@ COPY public.upload_whitelists (id, pattern, note, reason, allowed, hidden, creat
 --
 
 COPY public.uploads (id, source, rating, uploader_id, uploader_ip_addr, tag_string, status, backtrace, post_id, md5_confirmation, created_at, updated_at, parent_id, md5, file_ext, file_size, image_width, image_height, description) FROM stdin;
+1		e	1	172.19.0.1	male duo male/male anthro penetration chair_position dominant_bottom blushing starselle zuri serene_form basil 	completed	\N	1	\N	2024-09-01 04:15:53.560501	2024-09-01 04:15:54.055169	\N	93dabc87fc19755e89e8510a35e4dfc6	png	2186647	1900	1500	
 \.
 
 
@@ -3908,8 +4137,8 @@ COPY public.user_password_reset_nonces (id, key, created_at, updated_at, user_id
 --
 
 COPY public.user_statuses (id, created_at, updated_at, user_id, post_count, post_deleted_count, post_update_count, post_flag_count, favorite_count, wiki_edit_count, note_count, forum_post_count, comment_count, pool_edit_count, blip_count, set_count, artist_edit_count, own_post_replaced_count, own_post_replaced_penalize_count, post_replacement_rejected_count, ticket_count) FROM stdin;
-1	2024-09-01 03:45:21.340617	2024-09-01 03:45:21.340617	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-2	2024-09-01 03:45:29.183188	2024-09-01 03:45:29.183188	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2	2024-09-01 04:05:16.871192	2024-09-01 04:05:16.871192	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+1	2024-09-01 04:05:09.031214	2024-09-01 04:05:09.031214	1	1	0	1	0	0	0	0	0	0	0	0	0	2	0	0	0	0
 \.
 
 
@@ -3918,8 +4147,8 @@ COPY public.user_statuses (id, created_at, updated_at, user_id, post_count, post
 --
 
 COPY public.users (id, created_at, updated_at, name, password_hash, email, email_verification_key, level, base_upload_limit, last_logged_in_at, last_forum_read_at, recent_tags, comment_threshold, default_image_size, favorite_tags, blacklisted_tags, time_zone, bcrypt_password_hash, per_page, custom_style, bit_prefs, last_ip_addr, unread_dmail_count, profile_about, profile_artinfo, avatar_id) FROM stdin;
-1	2024-08-18 03:45:13.402387	2024-09-01 03:45:21.125306	admin		admin@e621.local	\N	50	10	\N	\N	\N	-10	large	\N		Eastern Time (US & Canada)	$2a$12$YkafQPVd2i.6iJk8CqKNN.sZ6YBDGX4C58t4wo909uam4ZKSNuJsi	75	\N	111680	\N	0			\N
-2	2024-09-01 03:45:29.000556	2024-09-01 03:45:29.000556	auto_moderator		system@e621.local	\N	35	10	\N	\N	\N	-10	large	\N		Eastern Time (US & Canada)	$2a$12$sqhtYBvkjYwWk.BcgLra6Oy.CMfYY2SXaVW9ohh1te1WyKBUBg/sq	75	\N	111680	\N	0			\N
+2	2024-09-01 04:05:16.689184	2024-09-01 04:05:16.689184	auto_moderator		system@e621.local	\N	35	10	\N	\N	\N	-10	large	\N		Eastern Time (US & Canada)	$2a$12$MrdOR4CWLtBH763DKcJQbuyhAy8zFapU6ebss47CWj10ERYnzJTOO	75	\N	111680	\N	0			\N
+1	2024-08-18 04:05:00.986122	2024-09-01 04:09:46.823403	admin		admin@e621.local	\N	50	10	2024-09-01 04:09:46.822532	\N	\N	-10	large	\N		Eastern Time (US & Canada)	$2a$12$.AJHur8m2hywoKsR9X8TAuKx9QelUyWauL4BLMcxLh72bvlB579je	75	\N	111680	172.19.0.1	0			\N
 \.
 
 
@@ -3950,21 +4179,21 @@ SELECT pg_catalog.setval('public.api_keys_id_seq', 1, false);
 -- Name: artist_urls_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.artist_urls_id_seq', 1, false);
+SELECT pg_catalog.setval('public.artist_urls_id_seq', 4, true);
 
 
 --
 -- Name: artist_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.artist_versions_id_seq', 1, false);
+SELECT pg_catalog.setval('public.artist_versions_id_seq', 2, true);
 
 
 --
 -- Name: artists_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.artists_id_seq', 1, false);
+SELECT pg_catalog.setval('public.artists_id_seq', 2, true);
 
 
 --
@@ -3999,7 +4228,7 @@ SELECT pg_catalog.setval('public.blips_id_seq', 1, false);
 -- Name: bulk_update_requests_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.bulk_update_requests_id_seq', 1, false);
+SELECT pg_catalog.setval('public.bulk_update_requests_id_seq', 2, true);
 
 
 --
@@ -4132,7 +4361,7 @@ SELECT pg_catalog.setval('public.mascots_id_seq', 1, true);
 -- Name: mod_actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.mod_actions_id_seq', 2, true);
+SELECT pg_catalog.setval('public.mod_actions_id_seq', 125, true);
 
 
 --
@@ -4230,7 +4459,7 @@ SELECT pg_catalog.setval('public.post_sets_id_seq', 1, false);
 -- Name: post_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.post_versions_id_seq', 1, false);
+SELECT pg_catalog.setval('public.post_versions_id_seq', 1, true);
 
 
 --
@@ -4244,14 +4473,14 @@ SELECT pg_catalog.setval('public.post_votes_id_seq', 1, false);
 -- Name: posts_change_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.posts_change_seq_seq', 1, false);
+SELECT pg_catalog.setval('public.posts_change_seq_seq', 1, true);
 
 
 --
 -- Name: posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.posts_id_seq', 1, false);
+SELECT pg_catalog.setval('public.posts_id_seq', 1, true);
 
 
 --
@@ -4279,7 +4508,7 @@ SELECT pg_catalog.setval('public.tag_aliases_id_seq', 1, false);
 -- Name: tag_implications_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.tag_implications_id_seq', 1, false);
+SELECT pg_catalog.setval('public.tag_implications_id_seq', 41, true);
 
 
 --
@@ -4300,7 +4529,7 @@ SELECT pg_catalog.setval('public.tag_type_versions_id_seq', 1, false);
 -- Name: tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.tags_id_seq', 1, false);
+SELECT pg_catalog.setval('public.tags_id_seq', 52, true);
 
 
 --
@@ -4328,7 +4557,7 @@ SELECT pg_catalog.setval('public.upload_whitelists_id_seq', 1, true);
 -- Name: uploads_id_seq; Type: SEQUENCE SET; Schema: public; Owner: e621
 --
 
-SELECT pg_catalog.setval('public.uploads_id_seq', 1, false);
+SELECT pg_catalog.setval('public.uploads_id_seq', 1, true);
 
 
 --
