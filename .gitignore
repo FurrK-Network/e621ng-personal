@@ -20,6 +20,7 @@ tmp/*.png
 .gitconfig
 test/reports
 
+
 .idea
 
 /public/packs
@@ -28,3 +29,4 @@ test/reports
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+**/ART_DATA

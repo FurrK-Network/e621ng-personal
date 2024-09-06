@@ -1,27 +1,4 @@
 #!/bin/bash
 
 # Docker and PostgreSQL details
-CONTAINER_NAME="e621ng-personal-postgres-1"
-DB_NAME="e621_development"
-DB_USER="e621"
-DUMP_DIR="./dump"
-
-echo "Running pre-push checks..."
-
-# Ensure the dump directory exists
-mkdir -p $DUMP_DIR
-
-# Perform data-only SQL dump inside the Docker container
-echo "Performing data-only SQL dump..."
-DUMP_FILENAME="pg_dump.sql"
-if ! docker exec $CONTAINER_NAME pg_dump -U $DB_USER -d $DB_NAME --data-only --inserts --no-owner --no-acl > "$DUMP_DIR/$DUMP_FILENAME"; then
-    echo "SQL dump failed. Push aborted."
-    exit 1
-fi
-
-# Add the new dump to Git
-git add "$DUMP_DIR/$DUMP_FILENAME"
-git commit -m "Data-only database dump $DUMP_FILENAME"
-
-echo "Pre-push checks passed. Data-only SQL dump created and committed."
-exit 0
+../../scripts/backup.sh
