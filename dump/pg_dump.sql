@@ -52,8 +52,8 @@ INSERT INTO public.artists VALUES (3, 'keavemind', 1, true, '', '2024-09-06 00:3
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.users VALUES (2, '2024-09-06 01:13:23.069453', '2024-09-06 01:13:23.069453', 'auto_moderator', '', 'system@e621.local', NULL, 35, 10, NULL, NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$1OcsuKA2PBL85va03BkXluD7Zky8WPqp4vWE8RK9Yf/UCe1MhsSnC', 75, NULL, 111680, NULL, 0, '', '', NULL);
-INSERT INTO public.users VALUES (1, '2024-08-23 01:13:14.81978', '2024-09-06 01:14:23.363072', 'admin', '', 'admin@e621.local', NULL, 50, 10, '2024-09-06 01:14:23.362204', NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$Fb9IhEJSqLpPwzqPxGuX5eh9YMyclPSEHfe1JbzAStVjS0.M1cuGG', 75, NULL, 111680, '172.18.0.1', 0, '', '', NULL);
+INSERT INTO public.users VALUES (1, '2024-08-23 02:25:14.990151', '2024-09-06 02:25:19.017266', 'admin', '', 'admin@e621.local', NULL, 50, 10, NULL, NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$HRi..LXtoTWF9mKrrob7veqkaZydMV/jmV8z3MEqCL6uf3azapZF.', 75, NULL, 111680, NULL, 0, '', '', NULL);
+INSERT INTO public.users VALUES (2, '2024-09-06 02:25:23.255248', '2024-09-06 02:25:23.255248', 'auto_moderator', '', 'system@e621.local', NULL, 35, 10, NULL, NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$sKRNySY8g8Ba5YtLDVXKk.1iremu/eG2JoxZqlCkswtay5Nr5REEi', 75, NULL, 111680, NULL, 0, '', '', NULL);
 
 
 --
