@@ -8,7 +8,10 @@ DUMP_FILENAME="pg_dump.sql"
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 ROOT_DIR="$(dirname $SCRIPT_DIR)"
 DUMP_DATA_DIR=$ROOT_DIR/dump
+BACKUP_DIR="/mnt/c/Users/andyq/OneDrive/Documents/e6_DATA"
 DUMP_DIR=${1-$DUMP_DATA_DIR}
+ART_DATA_DIR_NAME="ART_DATA"
+ART_DATA_DIR="$ROOT_DIR/$ART_DATA_DIR_NAME"
 
 echo "Dumping into $DUMP_DIR"
 
@@ -26,5 +29,16 @@ fi
 git add "$DUMP_DIR/$DUMP_FILENAME"
 git commit -m "Data-only database dump $DUMP_FILENAME"
 
-echo "Pre-push checks passed. Data-only SQL dump created and committed."
+# echo "Pre-push checks passed. Data-only SQL dump created and committed."
+
+
+echo "Running Initialization of RSync"
+sudo chmod 777 $ART_DATA_DIR/**/*
+sudo chmod 777 $ART_DATA_DIR/opensearch_data/*
+sudo chmod 777 $ART_DATA_DIR/post_data/*
+sudo chmod 777 $ART_DATA_DIR/redis_data_v2/dump.rdb
+
+ls -la $ART_DATA_DIR
+
+$SCRIPT_DIR/init_rsync.sh $ART_DATA_DIR $BACKUP_DIR
 exit 0

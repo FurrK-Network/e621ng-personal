@@ -9,9 +9,9 @@ echo "Script directory: $SCRIPT_DIR"
 echo "Root directory: $ROOT_DIR"
 echo "Art Data Dir: $ART_DATA_DIR"
 
-if [ -d "$ART_DATA_DIR" ]; then
+if [ -d "$BACKUP_DIR/ART_DATA" ]; then
   echo "Backup directory exists. Copying."
-  cp -rf $ART_DATA_DIR $ROOT_DIR
+  cp -rf $BACKUP_DIR/ART_DATA $ROOT_DIR
 else
   if [ ! -d "$ART_DATA_DIR" ]; then
     echo "Creating Backup directory"
@@ -19,7 +19,6 @@ else
     mkdir -p $ART_DATA_DIR/opensearch_data
     mkdir -p $ART_DATA_DIR/post_data
     mkdir -p $ART_DATA_DIR/redis_data_v2
-    mkdir -p $ART_DATA_DIR/rubocop_cache
     echo "Created Backup directory"
   else
     echo "Backup directory exists. Skipping."
@@ -43,6 +42,9 @@ $SCRIPT_DIR/migrate_db.sh $DUMP_DATA_DIR >$LOGS_DIR/migrate_db.log 2>&1
 
 
 echo "Running Initialization of RSync"
-# sudo chmod 777 $ART_DATA_DIR/redis_data_v2/
+sudo chmod 777 $ART_DATA_DIR/**/*
+sudo chmod 777 $ART_DATA_DIR/opensearch_data/*
+sudo chmod 777 $ART_DATA_DIR/post_data/*
+sudo chmod 777 $ART_DATA_DIR/redis_data_v2/dump.rdb
 $SCRIPT_DIR/init_rsync.sh $ART_DATA_DIR $BACKUP_DIR >$LOGS_DIR/init_rsync.log
 exit 0

@@ -175,7 +175,7 @@ services:
     image: e621
     volumes:
       - .:/app
-      - ./ART_DATA/rubocop_cache:/rubocop_cache
+      - rubocop_cache:/rubocop_cache
     entrypoint: bundle exec rubocop --cache-root /rubocop_cache
     profiles:
       - rubocop
@@ -194,3 +194,4 @@ volumes:
   scripts:
   node_modules:
   iqdb_data:
+  rubocop_cache:
