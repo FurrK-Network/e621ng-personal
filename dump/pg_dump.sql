@@ -52,8 +52,8 @@ INSERT INTO public.artists VALUES (3, 'keavemind', 1, true, '', '2024-09-06 00:3
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.users VALUES (2, '2024-09-05 21:49:00.569443', '2024-09-05 21:49:00.569443', 'auto_moderator', '', 'system@e621.local', NULL, 35, 10, NULL, NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$TnblEJ/EHLUr5AW7TcKPhuEcCWs9FEkkKSVRUby7IPnTJtpjNnqDW', 75, NULL, 111680, NULL, 0, '', '', NULL);
-INSERT INTO public.users VALUES (1, '2024-08-22 21:48:48.645209', '2024-09-05 22:58:41.57315', 'zuri', '', 'admin@e621.local', NULL, 50, 10, '2024-09-05 22:58:41.572308', NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$OI3GPNJtDWR0MjxNfum53e9IBuvtQH4hWHKUtEhMHWhxPeQbKd2cK', 75, NULL, 111680, '172.18.0.1', 0, '', '', NULL);
+INSERT INTO public.users VALUES (2, '2024-09-06 01:13:23.069453', '2024-09-06 01:13:23.069453', 'auto_moderator', '', 'system@e621.local', NULL, 35, 10, NULL, NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$1OcsuKA2PBL85va03BkXluD7Zky8WPqp4vWE8RK9Yf/UCe1MhsSnC', 75, NULL, 111680, NULL, 0, '', '', NULL);
+INSERT INTO public.users VALUES (1, '2024-08-23 01:13:14.81978', '2024-09-06 01:14:23.363072', 'admin', '', 'admin@e621.local', NULL, 50, 10, '2024-09-06 01:14:23.362204', NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$Fb9IhEJSqLpPwzqPxGuX5eh9YMyclPSEHfe1JbzAStVjS0.M1cuGG', 75, NULL, 111680, '172.18.0.1', 0, '', '', NULL);
 
 
 --
@@ -150,7 +150,6 @@ INSERT INTO public.destroyed_posts VALUES (1, 1, '93dabc87fc19755e89e8510a35e4df
 -- Data for Name: posts; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.posts VALUES (2, '2024-09-06 00:27:41.40842', '2024-09-06 00:27:41.40842', 0, 0, 0, '', '13866433806034495e2e8bc78656047e', 's', false, false, false, false, false, false, 1, '172.18.0.1', NULL, '', '', NULL, NULL, 0, 'anthro black_body black_fur blonde_highlights cheek_tuft cheetah chest_ruft duo ear_piercing facial_tuft felid feline felis fur hair highlights_(coloring) industrial_piercing industrial_piercing_ladder inner_ear_fluff keavemind male male/male mammal markings maxwell_speedmew piercing spots spotted_body spotted_fur sticker tail tongue tongue_out tuft white_body white_fur zuri', 37, 28, 1, 2, 0, 'png', 204196, 512, 512, NULL, false, NULL, false, 2, 1, NULL, 5, 0, '', 0, 2, 0, NULL, NULL, NULL, false);
 
 
 --
