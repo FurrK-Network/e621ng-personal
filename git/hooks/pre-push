@@ -1,4 +1,7 @@
 #!/bin/bash
+../../../scripts/backup.sh
 
-# Docker and PostgreSQL details
-../../scripts/backup.sh
+git add ../../../dump/pg_dump.sql
+git commit -m 'Dump'
+
+exit 0

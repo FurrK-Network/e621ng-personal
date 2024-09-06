@@ -17,20 +17,6 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: api_keys; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: ar_internal_metadata; Type: TABLE DATA; Schema: public; Owner: -
---
-
-INSERT INTO public.ar_internal_metadata VALUES ('environment', 'development', '2024-09-05 21:48:44.958143', '2024-09-05 21:48:44.958145');
-INSERT INTO public.ar_internal_metadata VALUES ('schema_sha1', 'f2e98d318322cce7af7d935e2d86308f8c496284', '2024-09-05 21:48:44.964713', '2024-09-05 21:48:44.964715');
-
-
---
 -- Data for Name: artist_urls; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -38,6 +24,10 @@ INSERT INTO public.artist_urls VALUES (1, 1, 'https://t.me/Starselle', 'http://t
 INSERT INTO public.artist_urls VALUES (2, 1, 'https://t.me/Starsellensfw', 'http://t.me/Starsellensfw/', '2024-09-01 04:14:23.862031', '2024-09-01 04:14:23.862031', true);
 INSERT INTO public.artist_urls VALUES (3, 1, 'https://t.me/Starsie', 'http://t.me/Starsie/', '2024-09-01 04:14:23.864768', '2024-09-01 04:14:23.864768', true);
 INSERT INTO public.artist_urls VALUES (4, 1, 'https://x.com/Starsielle', 'http://x.com/Starsielle/', '2024-09-01 04:14:23.86682', '2024-09-01 04:14:23.86682', true);
+INSERT INTO public.artist_urls VALUES (5, 3, 'https://www.furaffinity.net/user/keavemind/', 'http://www.furaffinity.net/user/keavemind/', '2024-09-06 00:37:13.556533', '2024-09-06 00:37:13.556533', true);
+INSERT INTO public.artist_urls VALUES (6, 3, 'https://x.com/keavemind?lang=en', 'http://x.com/keavemind?lang=en/', '2024-09-06 00:37:13.562414', '2024-09-06 00:37:13.562414', true);
+INSERT INTO public.artist_urls VALUES (7, 3, 'https://www.patreon.com/keavemind', 'http://www.patreon.com/keavemind/', '2024-09-06 00:37:13.563597', '2024-09-06 00:37:13.563597', true);
+INSERT INTO public.artist_urls VALUES (8, 3, 'https://www.deviantart.com/keavemind', 'http://www.deviantart.com/keavemind/', '2024-09-06 00:37:13.564759', '2024-09-06 00:37:13.564759', true);
 
 
 --
@@ -46,6 +36,7 @@ INSERT INTO public.artist_urls VALUES (4, 1, 'https://x.com/Starsielle', 'http:/
 
 INSERT INTO public.artist_versions VALUES (1, 1, 'starselle', 1, '172.19.0.1', true, '', '2024-09-01 04:14:23.903532', '2024-09-01 04:14:23.903532', '{starsie}', '{https://t.me/Starselle,https://t.me/Starsellensfw,https://t.me/Starsie,https://x.com/Starsielle}', false);
 INSERT INTO public.artist_versions VALUES (2, 2, 'starsie', 1, '172.19.0.1', true, '', '2024-09-01 04:14:31.227654', '2024-09-01 04:14:31.227654', '{starselle}', '{}', false);
+INSERT INTO public.artist_versions VALUES (3, 3, 'keavemind', 1, '172.18.0.1', true, '', '2024-09-06 00:37:13.586447', '2024-09-06 00:37:13.586447', '{}', '{https://www.deviantart.com/keavemind,https://www.furaffinity.net/user/keavemind/,https://www.patreon.com/keavemind,https://x.com/keavemind?lang=en}', false);
 
 
 --
@@ -54,6 +45,7 @@ INSERT INTO public.artist_versions VALUES (2, 2, 'starsie', 1, '172.19.0.1', tru
 
 INSERT INTO public.artists VALUES (1, 'starselle', 1, true, '', '2024-09-01 04:14:23.847719', '2024-09-01 04:14:23.867971', '{starsie}', NULL, false);
 INSERT INTO public.artists VALUES (2, 'starsie', 1, true, '', '2024-09-01 04:14:31.219634', '2024-09-01 04:14:31.219634', '{starselle}', NULL, false);
+INSERT INTO public.artists VALUES (3, 'keavemind', 1, true, '', '2024-09-06 00:37:13.551178', '2024-09-06 00:37:13.566472', '{}', NULL, false);
 
 
 --
@@ -61,7 +53,7 @@ INSERT INTO public.artists VALUES (2, 'starsie', 1, true, '', '2024-09-01 04:14:
 --
 
 INSERT INTO public.users VALUES (2, '2024-09-05 21:49:00.569443', '2024-09-05 21:49:00.569443', 'auto_moderator', '', 'system@e621.local', NULL, 35, 10, NULL, NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$TnblEJ/EHLUr5AW7TcKPhuEcCWs9FEkkKSVRUby7IPnTJtpjNnqDW', 75, NULL, 111680, NULL, 0, '', '', NULL);
-INSERT INTO public.users VALUES (1, '2024-08-22 21:48:48.645209', '2024-09-05 22:58:41.57315', 'admin', '', 'admin@e621.local', NULL, 50, 10, '2024-09-05 22:58:41.572308', NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$OI3GPNJtDWR0MjxNfum53e9IBuvtQH4hWHKUtEhMHWhxPeQbKd2cK', 75, NULL, 111680, '172.18.0.1', 0, '', '', NULL);
+INSERT INTO public.users VALUES (1, '2024-08-22 21:48:48.645209', '2024-09-05 22:58:41.57315', 'zuri', '', 'admin@e621.local', NULL, 50, 10, '2024-09-05 22:58:41.572308', NULL, NULL, -10, 'large', NULL, '', 'Eastern Time (US & Canada)', '$2a$12$OI3GPNJtDWR0MjxNfum53e9IBuvtQH4hWHKUtEhMHWhxPeQbKd2cK', 75, NULL, 111680, '172.18.0.1', 0, '', '', NULL);
 
 
 --
@@ -72,18 +64,6 @@ INSERT INTO public.users VALUES (1, '2024-08-22 21:48:48.645209', '2024-09-05 22
 
 --
 -- Data for Name: avoid_posting_versions; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: bans; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: blips; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
@@ -151,12 +131,7 @@ implicate serene_form -> blue_eyes', 'approved', '2024-09-01 04:13:16.808832', '
 -- Data for Name: destroyed_posts; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-
-
---
--- Data for Name: dmail_filters; Type: TABLE DATA; Schema: public; Owner: -
---
-
+INSERT INTO public.destroyed_posts VALUES (1, 1, '93dabc87fc19755e89e8510a35e4dfc6', 1, '172.18.0.1', 1, '172.19.0.1', '2024-09-01 04:15:54.024047', '{"id":1,"description":"","md5":"93dabc87fc19755e89e8510a35e4dfc6","tags":"anthro avian basil bird black_body black_fur blonde_highlights blue_eyes blushing chair_position cheek_tuft cheetah chest_ruft corvid corvus_(genus) crow dominant_bottom duo ear_piercing facial_tuft felid feline felis fur hair hi_res highlights_(coloring) industrial_piercing industrial_piercing_ladder inner_ear_fluff male male/male mammal markings oscine passerine penetration piercing serene_form spots spotted_body spotted_fur starselle tail tongue tongue_out tuft white_body white_feathers white_fur zuri","height":1500,"width":1900,"file_size":2186647,"sources":"","approver_id":null,"locked_tags":null,"rating":"e","parent_id":null,"change_seq":1,"is_deleted":false,"is_pending":false,"duration":null,"fav_count":0,"comment_count":0}', '2024-09-06 00:40:48.434945', '2024-09-06 00:40:48.434945', '', true);
 
 
 --
@@ -172,63 +147,14 @@ implicate serene_form -> blue_eyes', 'approved', '2024-09-01 04:13:16.808832', '
 
 
 --
--- Data for Name: email_blacklists; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: exception_logs; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
 -- Data for Name: posts; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.posts VALUES (1, '2024-09-01 04:15:54.024047', '2024-09-01 04:15:54.024047', 0, 0, 0, '', '93dabc87fc19755e89e8510a35e4dfc6', 'e', false, false, false, false, false, false, 1, '172.19.0.1', NULL, '', '', NULL, NULL, 0, 'anthro avian basil bird black_body black_fur blonde_highlights blue_eyes blushing chair_position cheek_tuft cheetah chest_ruft corvid corvus_(genus) crow dominant_bottom duo ear_piercing facial_tuft felid feline felis fur hair hi_res highlights_(coloring) industrial_piercing industrial_piercing_ladder inner_ear_fluff male male/male mammal markings oscine passerine penetration piercing serene_form spots spotted_body spotted_fur starselle tail tongue tongue_out tuft white_body white_feathers white_fur zuri', 51, 50, 1, 0, 0, 'png', 2186647, 1900, 1500, NULL, false, NULL, false, 2, 0, NULL, 0, 0, '', 0, 1, 0, NULL, NULL, NULL, false);
+INSERT INTO public.posts VALUES (2, '2024-09-06 00:27:41.40842', '2024-09-06 00:27:41.40842', 0, 0, 0, '', '13866433806034495e2e8bc78656047e', 's', false, false, false, false, false, false, 1, '172.18.0.1', NULL, '', '', NULL, NULL, 0, 'anthro black_body black_fur blonde_highlights cheek_tuft cheetah chest_ruft duo ear_piercing facial_tuft felid feline felis fur hair highlights_(coloring) industrial_piercing industrial_piercing_ladder inner_ear_fluff keavemind male male/male mammal markings maxwell_speedmew piercing spots spotted_body spotted_fur sticker tail tongue tongue_out tuft white_body white_fur zuri', 37, 28, 1, 2, 0, 'png', 204196, 512, 512, NULL, false, NULL, false, 2, 1, NULL, 5, 0, '', 0, 2, 0, NULL, NULL, NULL, false);
 
 
 --
 -- Data for Name: favorites; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: forum_categories; Type: TABLE DATA; Schema: public; Owner: -
---
-
-INSERT INTO public.forum_categories VALUES (1, 'Tag Alias and Implication Suggestions', NULL, NULL, 0, 20, 20);
-
-
---
--- Data for Name: forum_post_votes; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: forum_posts; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: forum_subscriptions; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: forum_topic_visits; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: forum_topics; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
@@ -240,16 +166,10 @@ INSERT INTO public.forum_categories VALUES (1, 'Tag Alias and Implication Sugges
 
 
 --
--- Data for Name: ip_bans; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
 -- Data for Name: mascots; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.mascots VALUES (1, 1, 'Hexerade 3', '53a014c46528923fc4baf2192af926bd', 'png', '#012e57', 'https://furaffinity.net/user/chizi', 'chizi', true, '2024-09-05 21:49:03.143899', '2024-09-05 21:49:03.143899', '{e621}');
+INSERT INTO public.mascots VALUES (2, 1, 'Zuri_Maxy', '13866433806034495e2e8bc78656047e', 'png', '#012e57', 'https://furaffinity.net/user/chizi', 'Keave', true, '2024-09-05 21:49:03.143899', '2024-09-05 21:49:03.143899', '{e621}');
 
 
 --
@@ -384,12 +304,6 @@ INSERT INTO public.mod_actions VALUES (121, 1, '2024-09-01 04:13:46.550294', '20
 
 
 --
--- Data for Name: news_updates; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
 -- Data for Name: note_versions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -429,6 +343,7 @@ INSERT INTO public.mod_actions VALUES (121, 1, '2024-09-01 04:13:46.550294', '20
 -- Data for Name: post_events; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+INSERT INTO public.post_events VALUES (1, 1, 1, 17, '{}', '2024-09-06 00:40:48.454841');
 
 
 --
@@ -439,12 +354,6 @@ INSERT INTO public.mod_actions VALUES (121, 1, '2024-09-01 04:13:46.550294', '20
 
 --
 -- Data for Name: post_replacements2; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: post_report_reasons; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 
@@ -465,285 +374,13 @@ INSERT INTO public.mod_actions VALUES (121, 1, '2024-09-01 04:13:46.550294', '20
 -- Data for Name: post_versions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.post_versions VALUES (1, 1, 'anthro avian basil bird black_body black_fur blonde_highlights blue_eyes blushing chair_position cheek_tuft cheetah chest_ruft corvid corvus_(genus) crow dominant_bottom duo ear_piercing facial_tuft felid feline felis fur hair hi_res highlights_(coloring) industrial_piercing industrial_piercing_ladder inner_ear_fluff male male/male mammal markings oscine passerine penetration piercing serene_form spots spotted_body spotted_fur starselle tail tongue tongue_out tuft white_body white_feathers white_fur zuri', '{anthro,avian,basil,bird,black_body,black_fur,blonde_highlights,blue_eyes,blushing,chair_position,cheek_tuft,cheetah,chest_ruft,corvid,corvus_(genus),crow,dominant_bottom,duo,ear_piercing,facial_tuft,felid,feline,felis,fur,hair,hi_res,highlights_(coloring),industrial_piercing,industrial_piercing_ladder,inner_ear_fluff,male,male/male,mammal,markings,oscine,passerine,penetration,piercing,serene_form,spots,spotted_body,spotted_fur,starselle,tail,tongue,tongue_out,tuft,white_body,white_feathers,white_fur,zuri}', '{}', NULL, '{}', '{}', 1, '172.19.0.1', '2024-09-01 04:15:54.050054', 'e', true, NULL, true, '', true, '', true, 1, NULL);
+INSERT INTO public.post_versions VALUES (2, 2, 'anthro black_body black_fur blonde_highlights cheek_tuft cheetah chest_ruft duo ear_piercing facial_tuft felid feline felis fur hair highlights_(coloring) industrial_piercing industrial_piercing_ladder inner_ear_fluff keavemind male male/male mammal markings maxwell_speedmew piercing spots spotted_body spotted_fur sticker tail tongue tongue_out tuft white_body white_fur zuri', '{anthro,black_body,black_fur,blonde_highlights,cheek_tuft,cheetah,chest_ruft,duo,ear_piercing,facial_tuft,felid,feline,felis,fur,hair,highlights_(coloring),industrial_piercing,industrial_piercing_ladder,inner_ear_fluff,keavemind,male,male/male,mammal,markings,maxwell_speedmew,piercing,spots,spotted_body,spotted_fur,sticker,tail,tongue,tongue_out,tuft,white_body,white_fur,zuri}', '{}', NULL, '{}', '{}', 1, '172.18.0.1', '2024-09-06 00:27:41.447072', 's', true, NULL, true, '', true, '', true, 1, NULL);
 
 
 --
 -- Data for Name: post_votes; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-
-
---
--- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: -
---
-
-INSERT INTO public.schema_migrations VALUES ('20240726170041');
-INSERT INTO public.schema_migrations VALUES ('20240709134926');
-INSERT INTO public.schema_migrations VALUES ('20240706061122');
-INSERT INTO public.schema_migrations VALUES ('20240103002049');
-INSERT INTO public.schema_migrations VALUES ('20240103002040');
-INSERT INTO public.schema_migrations VALUES ('20240101042716');
-INSERT INTO public.schema_migrations VALUES ('20230531080817');
-INSERT INTO public.schema_migrations VALUES ('20230518182034');
-INSERT INTO public.schema_migrations VALUES ('20230517155547');
-INSERT INTO public.schema_migrations VALUES ('20230513074838');
-INSERT INTO public.schema_migrations VALUES ('20230506161827');
-INSERT INTO public.schema_migrations VALUES ('20230316084945');
-INSERT INTO public.schema_migrations VALUES ('20230314170352');
-INSERT INTO public.schema_migrations VALUES ('20230312103728');
-INSERT INTO public.schema_migrations VALUES ('20230226152600');
-INSERT INTO public.schema_migrations VALUES ('20230221153458');
-INSERT INTO public.schema_migrations VALUES ('20230221145226');
-INSERT INTO public.schema_migrations VALUES ('20230219115601');
-INSERT INTO public.schema_migrations VALUES ('20230210092829');
-INSERT INTO public.schema_migrations VALUES ('20230204141325');
-INSERT INTO public.schema_migrations VALUES ('20230203162010');
-INSERT INTO public.schema_migrations VALUES ('20221014085948');
-INSERT INTO public.schema_migrations VALUES ('20220810131625');
-INSERT INTO public.schema_migrations VALUES ('20220710133556');
-INSERT INTO public.schema_migrations VALUES ('20220516103329');
-INSERT INTO public.schema_migrations VALUES ('20220316162257');
-INSERT INTO public.schema_migrations VALUES ('20220219202441');
-INSERT INTO public.schema_migrations VALUES ('20220203154846');
-INSERT INTO public.schema_migrations VALUES ('20220106081415');
-INSERT INTO public.schema_migrations VALUES ('20210718172512');
-INSERT INTO public.schema_migrations VALUES ('20210625155528');
-INSERT INTO public.schema_migrations VALUES ('20210506235640');
-INSERT INTO public.schema_migrations VALUES ('20210430201028');
-INSERT INTO public.schema_migrations VALUES ('20210426025625');
-INSERT INTO public.schema_migrations VALUES ('20210425020131');
-INSERT INTO public.schema_migrations VALUES ('20210405040522');
-INSERT INTO public.schema_migrations VALUES ('20210117173030');
-INSERT INTO public.schema_migrations VALUES ('20201220190335');
-INSERT INTO public.schema_migrations VALUES ('20201220172926');
-INSERT INTO public.schema_migrations VALUES ('20201113073842');
-INSERT INTO public.schema_migrations VALUES ('20200910015420');
-INSERT INTO public.schema_migrations VALUES ('20200806101238');
-INSERT INTO public.schema_migrations VALUES ('20200713053034');
-INSERT INTO public.schema_migrations VALUES ('20200420032714');
-INSERT INTO public.schema_migrations VALUES ('20200113022639');
-INSERT INTO public.schema_migrations VALUES ('20191231162515');
-INSERT INTO public.schema_migrations VALUES ('20191116032230');
-INSERT INTO public.schema_migrations VALUES ('20191013233447');
-INSERT INTO public.schema_migrations VALUES ('20191006143246');
-INSERT INTO public.schema_migrations VALUES ('20191006073950');
-INSERT INTO public.schema_migrations VALUES ('20191003070653');
-INSERT INTO public.schema_migrations VALUES ('20190924233432');
-INSERT INTO public.schema_migrations VALUES ('20190919213915');
-INSERT INTO public.schema_migrations VALUES ('20190916204908');
-INSERT INTO public.schema_migrations VALUES ('20190905111159');
-INSERT INTO public.schema_migrations VALUES ('20190829044313');
-INSERT INTO public.schema_migrations VALUES ('20190827233008');
-INSERT INTO public.schema_migrations VALUES ('20190827223818');
-INSERT INTO public.schema_migrations VALUES ('20190815131908');
-INSERT INTO public.schema_migrations VALUES ('20190810064211');
-INSERT INTO public.schema_migrations VALUES ('20190804010156');
-INSERT INTO public.schema_migrations VALUES ('20190801210547');
-INSERT INTO public.schema_migrations VALUES ('20190718201354');
-INSERT INTO public.schema_migrations VALUES ('20190717205018');
-INSERT INTO public.schema_migrations VALUES ('20190714122705');
-INSERT INTO public.schema_migrations VALUES ('20190623070654');
-INSERT INTO public.schema_migrations VALUES ('20190613025850');
-INSERT INTO public.schema_migrations VALUES ('20190604125828');
-INSERT INTO public.schema_migrations VALUES ('20190602115848');
-INSERT INTO public.schema_migrations VALUES ('20190510184245');
-INSERT INTO public.schema_migrations VALUES ('20190510184237');
-INSERT INTO public.schema_migrations VALUES ('20190430120155');
-INSERT INTO public.schema_migrations VALUES ('20190428132152');
-INSERT INTO public.schema_migrations VALUES ('20190427181805');
-INSERT INTO public.schema_migrations VALUES ('20190427163107');
-INSERT INTO public.schema_migrations VALUES ('20190418093745');
-INSERT INTO public.schema_migrations VALUES ('20190413055451');
-INSERT INTO public.schema_migrations VALUES ('20190410022203');
-INSERT INTO public.schema_migrations VALUES ('20190409195837');
-INSERT INTO public.schema_migrations VALUES ('20190403174011');
-INSERT INTO public.schema_migrations VALUES ('20190331193644');
-INSERT INTO public.schema_migrations VALUES ('20190324111703');
-INSERT INTO public.schema_migrations VALUES ('20190317024446');
-INSERT INTO public.schema_migrations VALUES ('20190313221440');
-INSERT INTO public.schema_migrations VALUES ('20190305165101');
-INSERT INTO public.schema_migrations VALUES ('20190228144206');
-INSERT INTO public.schema_migrations VALUES ('20190222082952');
-INSERT INTO public.schema_migrations VALUES ('20190220041928');
-INSERT INTO public.schema_migrations VALUES ('20190220025517');
-INSERT INTO public.schema_migrations VALUES ('20190214090126');
-INSERT INTO public.schema_migrations VALUES ('20190214040324');
-INSERT INTO public.schema_migrations VALUES ('20190209212716');
-INSERT INTO public.schema_migrations VALUES ('20190206023508');
-INSERT INTO public.schema_migrations VALUES ('20190202155518');
-INSERT INTO public.schema_migrations VALUES ('20190129012253');
-INSERT INTO public.schema_migrations VALUES ('20190109210822');
-INSERT INTO public.schema_migrations VALUES ('20181202172145');
-INSERT INTO public.schema_migrations VALUES ('20181130004740');
-INSERT INTO public.schema_migrations VALUES ('20181114202744');
-INSERT INTO public.schema_migrations VALUES ('20181114185032');
-INSERT INTO public.schema_migrations VALUES ('20181114180205');
-INSERT INTO public.schema_migrations VALUES ('20181113174914');
-INSERT INTO public.schema_migrations VALUES ('20181108205842');
-INSERT INTO public.schema_migrations VALUES ('20181108162204');
-INSERT INTO public.schema_migrations VALUES ('20180916002448');
-INSERT INTO public.schema_migrations VALUES ('20180913184128');
-INSERT INTO public.schema_migrations VALUES ('20180912185624');
-INSERT INTO public.schema_migrations VALUES ('20180816230604');
-INSERT INTO public.schema_migrations VALUES ('20180804203201');
-INSERT INTO public.schema_migrations VALUES ('20180518175154');
-INSERT INTO public.schema_migrations VALUES ('20180517190048');
-INSERT INTO public.schema_migrations VALUES ('20180516222413');
-INSERT INTO public.schema_migrations VALUES ('20180425194016');
-INSERT INTO public.schema_migrations VALUES ('20180413224239');
-INSERT INTO public.schema_migrations VALUES ('20180403231351');
-INSERT INTO public.schema_migrations VALUES ('20180116001101');
-INSERT INTO public.schema_migrations VALUES ('20180113211343');
-INSERT INTO public.schema_migrations VALUES ('20171230220225');
-INSERT INTO public.schema_migrations VALUES ('20171219001521');
-INSERT INTO public.schema_migrations VALUES ('20171218213037');
-INSERT INTO public.schema_migrations VALUES ('20171127195124');
-INSERT INTO public.schema_migrations VALUES ('20171106075030');
-INSERT INTO public.schema_migrations VALUES ('20170914200122');
-INSERT INTO public.schema_migrations VALUES ('20170709190409');
-INSERT INTO public.schema_migrations VALUES ('20170613200356');
-INSERT INTO public.schema_migrations VALUES ('20170608043651');
-INSERT INTO public.schema_migrations VALUES ('20170526183928');
-INSERT INTO public.schema_migrations VALUES ('20170519204506');
-INSERT INTO public.schema_migrations VALUES ('20170515235205');
-INSERT INTO public.schema_migrations VALUES ('20170512221200');
-INSERT INTO public.schema_migrations VALUES ('20170428220448');
-INSERT INTO public.schema_migrations VALUES ('20170416224142');
-INSERT INTO public.schema_migrations VALUES ('20170414233617');
-INSERT INTO public.schema_migrations VALUES ('20170414233426');
-INSERT INTO public.schema_migrations VALUES ('20170414005856');
-INSERT INTO public.schema_migrations VALUES ('20170413000209');
-INSERT INTO public.schema_migrations VALUES ('20170330230231');
-INSERT INTO public.schema_migrations VALUES ('20170329185605');
-INSERT INTO public.schema_migrations VALUES ('20170319000519');
-INSERT INTO public.schema_migrations VALUES ('20170316224630');
-INSERT INTO public.schema_migrations VALUES ('20170314235626');
-INSERT INTO public.schema_migrations VALUES ('20170302014435');
-INSERT INTO public.schema_migrations VALUES ('20170218104710');
-INSERT INTO public.schema_migrations VALUES ('20170117233040');
-INSERT INTO public.schema_migrations VALUES ('20170112060921');
-INSERT INTO public.schema_migrations VALUES ('20170112021922');
-INSERT INTO public.schema_migrations VALUES ('20170106012138');
-INSERT INTO public.schema_migrations VALUES ('20161229001201');
-INSERT INTO public.schema_migrations VALUES ('20161227003428');
-INSERT INTO public.schema_migrations VALUES ('20161221225849');
-INSERT INTO public.schema_migrations VALUES ('20161101003139');
-INSERT INTO public.schema_migrations VALUES ('20161024220345');
-INSERT INTO public.schema_migrations VALUES ('20161018221128');
-INSERT INTO public.schema_migrations VALUES ('20160919234407');
-INSERT INTO public.schema_migrations VALUES ('20160822230752');
-INSERT INTO public.schema_migrations VALUES ('20160820003534');
-INSERT INTO public.schema_migrations VALUES ('20160526174848');
-INSERT INTO public.schema_migrations VALUES ('20160222211328');
-INSERT INTO public.schema_migrations VALUES ('20160219172840');
-INSERT INTO public.schema_migrations VALUES ('20160219010854');
-INSERT INTO public.schema_migrations VALUES ('20160219004022');
-INSERT INTO public.schema_migrations VALUES ('20151217213321');
-INSERT INTO public.schema_migrations VALUES ('20150805010245');
-INSERT INTO public.schema_migrations VALUES ('20150728170433');
-INSERT INTO public.schema_migrations VALUES ('20150721214646');
-INSERT INTO public.schema_migrations VALUES ('20150705014135');
-INSERT INTO public.schema_migrations VALUES ('20150629235905');
-INSERT INTO public.schema_migrations VALUES ('20150623191904');
-INSERT INTO public.schema_migrations VALUES ('20150613010904');
-INSERT INTO public.schema_migrations VALUES ('20150403224949');
-INSERT INTO public.schema_migrations VALUES ('20150128005954');
-INSERT INTO public.schema_migrations VALUES ('20150120005624');
-INSERT INTO public.schema_migrations VALUES ('20150119191042');
-INSERT INTO public.schema_migrations VALUES ('20141120045943');
-INSERT INTO public.schema_migrations VALUES ('20141017231608');
-INSERT INTO public.schema_migrations VALUES ('20141009231234');
-INSERT INTO public.schema_migrations VALUES ('20140725003232');
-INSERT INTO public.schema_migrations VALUES ('20140722225753');
-INSERT INTO public.schema_migrations VALUES ('20140701224800');
-INSERT INTO public.schema_migrations VALUES ('20140613004559');
-INSERT INTO public.schema_migrations VALUES ('20140604002414');
-INSERT INTO public.schema_migrations VALUES ('20140603225334');
-INSERT INTO public.schema_migrations VALUES ('20140505000956');
-INSERT INTO public.schema_migrations VALUES ('20140428015134');
-INSERT INTO public.schema_migrations VALUES ('20140221213349');
-INSERT INTO public.schema_migrations VALUES ('20140204233337');
-INSERT INTO public.schema_migrations VALUES ('20140111191413');
-INSERT INTO public.schema_migrations VALUES ('20131225002748');
-INSERT INTO public.schema_migrations VALUES ('20131217025233');
-INSERT INTO public.schema_migrations VALUES ('20131209181023');
-INSERT INTO public.schema_migrations VALUES ('20131130190411');
-INSERT INTO public.schema_migrations VALUES ('20131118153503');
-INSERT INTO public.schema_migrations VALUES ('20131117150705');
-INSERT INTO public.schema_migrations VALUES ('20131006193238');
-INSERT INTO public.schema_migrations VALUES ('20130914175431');
-INSERT INTO public.schema_migrations VALUES ('20130712162600');
-INSERT INTO public.schema_migrations VALUES ('20130620215658');
-INSERT INTO public.schema_migrations VALUES ('20130618230158');
-INSERT INTO public.schema_migrations VALUES ('20130606224559');
-INSERT INTO public.schema_migrations VALUES ('20130506154136');
-INSERT INTO public.schema_migrations VALUES ('20130424121410');
-INSERT INTO public.schema_migrations VALUES ('20130417221643');
-INSERT INTO public.schema_migrations VALUES ('20130409191950');
-INSERT INTO public.schema_migrations VALUES ('20130401013601');
-INSERT INTO public.schema_migrations VALUES ('20130331182719');
-INSERT INTO public.schema_migrations VALUES ('20130331180246');
-INSERT INTO public.schema_migrations VALUES ('20130328092739');
-INSERT INTO public.schema_migrations VALUES ('20130326035904');
-INSERT INTO public.schema_migrations VALUES ('20130323160259');
-INSERT INTO public.schema_migrations VALUES ('20130322173859');
-INSERT INTO public.schema_migrations VALUES ('20130322173202');
-INSERT INTO public.schema_migrations VALUES ('20130322162059');
-INSERT INTO public.schema_migrations VALUES ('20130320070700');
-INSERT INTO public.schema_migrations VALUES ('20130318231740');
-INSERT INTO public.schema_migrations VALUES ('20130318030619');
-INSERT INTO public.schema_migrations VALUES ('20130318012517');
-INSERT INTO public.schema_migrations VALUES ('20130318002652');
-INSERT INTO public.schema_migrations VALUES ('20130308204213');
-INSERT INTO public.schema_migrations VALUES ('20130307225324');
-INSERT INTO public.schema_migrations VALUES ('20130305005138');
-INSERT INTO public.schema_migrations VALUES ('20130302214500');
-INSERT INTO public.schema_migrations VALUES ('20130221214811');
-INSERT INTO public.schema_migrations VALUES ('20130221035518');
-INSERT INTO public.schema_migrations VALUES ('20130221032344');
-INSERT INTO public.schema_migrations VALUES ('20130219184743');
-INSERT INTO public.schema_migrations VALUES ('20130219171111');
-INSERT INTO public.schema_migrations VALUES ('20130114154400');
-INSERT INTO public.schema_migrations VALUES ('20130106210658');
-INSERT INTO public.schema_migrations VALUES ('20111101212358');
-INSERT INTO public.schema_migrations VALUES ('20110815233456');
-INSERT INTO public.schema_migrations VALUES ('20110722211855');
-INSERT INTO public.schema_migrations VALUES ('20110717010705');
-INSERT INTO public.schema_migrations VALUES ('20110607194023');
-INSERT INTO public.schema_migrations VALUES ('20110328215701');
-INSERT INTO public.schema_migrations VALUES ('20110328215652');
-INSERT INTO public.schema_migrations VALUES ('20100826232512');
-INSERT INTO public.schema_migrations VALUES ('20100318213503');
-INSERT INTO public.schema_migrations VALUES ('20100309211553');
-INSERT INTO public.schema_migrations VALUES ('20100307073438');
-INSERT INTO public.schema_migrations VALUES ('20100224172146');
-INSERT INTO public.schema_migrations VALUES ('20100224171915');
-INSERT INTO public.schema_migrations VALUES ('20100223001012');
-INSERT INTO public.schema_migrations VALUES ('20100221005812');
-INSERT INTO public.schema_migrations VALUES ('20100221003655');
-INSERT INTO public.schema_migrations VALUES ('20100219230537');
-INSERT INTO public.schema_migrations VALUES ('20100215230642');
-INSERT INTO public.schema_migrations VALUES ('20100215225710');
-INSERT INTO public.schema_migrations VALUES ('20100215224635');
-INSERT INTO public.schema_migrations VALUES ('20100215224629');
-INSERT INTO public.schema_migrations VALUES ('20100215223541');
-INSERT INTO public.schema_migrations VALUES ('20100215213756');
-INSERT INTO public.schema_migrations VALUES ('20100215182234');
-INSERT INTO public.schema_migrations VALUES ('20100214080605');
-INSERT INTO public.schema_migrations VALUES ('20100214080557');
-INSERT INTO public.schema_migrations VALUES ('20100214080549');
-INSERT INTO public.schema_migrations VALUES ('20100213183712');
-INSERT INTO public.schema_migrations VALUES ('20100213181847');
-INSERT INTO public.schema_migrations VALUES ('20100211191716');
-INSERT INTO public.schema_migrations VALUES ('20100211191709');
-INSERT INTO public.schema_migrations VALUES ('20100211181944');
-INSERT INTO public.schema_migrations VALUES ('20100211025616');
-INSERT INTO public.schema_migrations VALUES ('20100205224030');
-INSERT INTO public.schema_migrations VALUES ('20100205163027');
-INSERT INTO public.schema_migrations VALUES ('20100205162521');
-INSERT INTO public.schema_migrations VALUES ('20100204214746');
-INSERT INTO public.schema_migrations VALUES ('20100204211522');
 
 
 --
@@ -821,6 +458,25 @@ INSERT INTO public.tag_implications VALUES (36, 'zuri', 'tongue', 1, '127.0.0.1'
 -- Data for Name: tag_type_versions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+INSERT INTO public.tag_type_versions VALUES (1, '2024-09-06 00:37:13.611044', '2024-09-06 00:37:13.611044', 0, 1, false, 54, 1);
+INSERT INTO public.tag_type_versions VALUES (2, '2024-09-06 00:39:13.446094', '2024-09-06 00:39:13.446094', 0, 5, false, 2, 1);
+INSERT INTO public.tag_type_versions VALUES (3, '2024-09-06 00:39:14.5979', '2024-09-06 00:39:14.5979', 0, 5, false, 3, 1);
+INSERT INTO public.tag_type_versions VALUES (4, '2024-09-06 00:39:15.27302', '2024-09-06 00:39:15.27302', 0, 5, false, 4, 1);
+INSERT INTO public.tag_type_versions VALUES (5, '2024-09-06 00:39:15.985226', '2024-09-06 00:39:15.985226', 0, 5, false, 5, 1);
+INSERT INTO public.tag_type_versions VALUES (6, '2024-09-06 00:39:16.714223', '2024-09-06 00:39:16.714223', 0, 5, false, 6, 1);
+INSERT INTO public.tag_type_versions VALUES (7, '2024-09-06 00:39:17.482602', '2024-09-06 00:39:17.482602', 0, 5, false, 7, 1);
+INSERT INTO public.tag_type_versions VALUES (8, '2024-09-06 00:39:18.172234', '2024-09-06 00:39:18.172234', 0, 5, false, 8, 1);
+INSERT INTO public.tag_type_versions VALUES (9, '2024-09-06 00:39:18.85665', '2024-09-06 00:39:18.85665', 0, 5, false, 9, 1);
+INSERT INTO public.tag_type_versions VALUES (10, '2024-09-06 00:39:19.526289', '2024-09-06 00:39:19.526289', 0, 4, false, 11, 1);
+INSERT INTO public.tag_type_versions VALUES (11, '2024-09-06 00:39:20.149748', '2024-09-06 00:39:20.149748', 0, 5, false, 12, 1);
+INSERT INTO public.tag_type_versions VALUES (12, '2024-09-06 00:39:20.856093', '2024-09-06 00:39:20.856093', 0, 5, false, 13, 1);
+INSERT INTO public.tag_type_versions VALUES (13, '2024-09-06 00:39:21.546945', '2024-09-06 00:39:21.546945', 0, 5, false, 14, 1);
+INSERT INTO public.tag_type_versions VALUES (14, '2024-09-06 00:39:22.186261', '2024-09-06 00:39:22.186261', 0, 5, false, 15, 1);
+INSERT INTO public.tag_type_versions VALUES (15, '2024-09-06 00:39:22.821196', '2024-09-06 00:39:22.821196', 0, 4, false, 1, 1);
+INSERT INTO public.tag_type_versions VALUES (16, '2024-09-06 00:39:24.11052', '2024-09-06 00:39:24.11052', 0, 7, false, 52, 1);
+INSERT INTO public.tag_type_versions VALUES (17, '2024-09-06 00:39:24.740085', '2024-09-06 00:39:24.740085', 0, 7, false, 53, 1);
+INSERT INTO public.tag_type_versions VALUES (18, '2024-09-06 00:39:25.437293', '2024-09-06 00:39:25.437293', 0, 4, false, 55, 1);
+INSERT INTO public.tag_type_versions VALUES (19, '2024-09-06 00:40:16.342858', '2024-09-06 00:40:16.342858', 0, 4, false, 42, 1);
 
 
 --
@@ -828,21 +484,27 @@ INSERT INTO public.tag_implications VALUES (36, 'zuri', 'tongue', 1, '127.0.0.1'
 --
 
 INSERT INTO public.tags VALUES (45, 'starsie', 0, 1, NULL, NULL, '2024-09-01 04:14:31.233527', '2024-09-01 04:14:31.233527', false);
-INSERT INTO public.tags VALUES (1, 'basil', 1, 0, NULL, NULL, '2024-09-01 04:10:03.246774', '2024-09-01 04:10:03.246774', false);
-INSERT INTO public.tags VALUES (2, 'bird', 1, 0, NULL, NULL, '2024-09-01 04:10:03.255948', '2024-09-01 04:10:03.255948', false);
-INSERT INTO public.tags VALUES (3, 'avian', 1, 0, NULL, NULL, '2024-09-01 04:10:03.305934', '2024-09-01 04:10:03.305934', false);
-INSERT INTO public.tags VALUES (4, 'corvid', 1, 0, NULL, NULL, '2024-09-01 04:10:03.335303', '2024-09-01 04:10:03.335303', false);
-INSERT INTO public.tags VALUES (5, 'corvus_(genus)', 1, 0, NULL, NULL, '2024-09-01 04:10:03.372608', '2024-09-01 04:10:03.372608', false);
-INSERT INTO public.tags VALUES (6, 'crow', 1, 0, NULL, NULL, '2024-09-01 04:10:03.40164', '2024-09-01 04:10:03.40164', false);
-INSERT INTO public.tags VALUES (7, 'oscine', 1, 0, NULL, NULL, '2024-09-01 04:10:03.42197', '2024-09-01 04:10:03.42197', false);
-INSERT INTO public.tags VALUES (8, 'passerine', 1, 0, NULL, NULL, '2024-09-01 04:10:03.442101', '2024-09-01 04:10:03.442101', false);
-INSERT INTO public.tags VALUES (9, 'anthro', 1, 0, NULL, NULL, '2024-09-01 04:10:03.464472', '2024-09-01 04:10:03.464472', false);
-INSERT INTO public.tags VALUES (10, 'white_feathers', 1, 0, NULL, NULL, '2024-09-01 04:10:03.500635', '2024-09-01 04:10:03.500635', false);
-INSERT INTO public.tags VALUES (11, 'zuri', 1, 0, NULL, NULL, '2024-09-01 04:13:16.410676', '2024-09-01 04:13:16.410676', false);
-INSERT INTO public.tags VALUES (12, 'felid', 1, 0, NULL, NULL, '2024-09-01 04:13:16.415795', '2024-09-01 04:13:16.415795', false);
-INSERT INTO public.tags VALUES (13, 'cheetah', 1, 0, NULL, NULL, '2024-09-01 04:13:16.428936', '2024-09-01 04:13:16.428936', false);
-INSERT INTO public.tags VALUES (14, 'feline', 1, 0, NULL, NULL, '2024-09-01 04:13:16.441388', '2024-09-01 04:13:16.441388', false);
-INSERT INTO public.tags VALUES (15, 'felis', 1, 0, NULL, NULL, '2024-09-01 04:13:16.453479', '2024-09-01 04:13:16.453479', false);
+INSERT INTO public.tags VALUES (2, 'bird', 0, 5, NULL, NULL, '2024-09-01 04:10:03.255948', '2024-09-06 00:39:13.450153', false);
+INSERT INTO public.tags VALUES (10, 'white_feathers', 0, 0, NULL, NULL, '2024-09-01 04:10:03.500635', '2024-09-01 04:10:03.500635', false);
+INSERT INTO public.tags VALUES (3, 'avian', 0, 5, NULL, NULL, '2024-09-01 04:10:03.305934', '2024-09-06 00:39:14.602', false);
+INSERT INTO public.tags VALUES (4, 'corvid', 0, 5, NULL, NULL, '2024-09-01 04:10:03.335303', '2024-09-06 00:39:15.276799', false);
+INSERT INTO public.tags VALUES (43, 'blue_eyes', 0, 0, NULL, NULL, '2024-09-01 04:13:16.802333', '2024-09-01 04:13:16.802333', false);
+INSERT INTO public.tags VALUES (44, 'starselle', 0, 1, NULL, NULL, '2024-09-01 04:14:23.914524', '2024-09-01 04:14:23.914524', false);
+INSERT INTO public.tags VALUES (46, 'chair_position', 0, 0, NULL, NULL, '2024-09-01 04:15:53.979974', '2024-09-01 04:15:53.979974', false);
+INSERT INTO public.tags VALUES (5, 'corvus_(genus)', 0, 5, NULL, NULL, '2024-09-01 04:10:03.372608', '2024-09-06 00:39:15.989291', false);
+INSERT INTO public.tags VALUES (6, 'crow', 0, 5, NULL, NULL, '2024-09-01 04:10:03.40164', '2024-09-06 00:39:16.719452', false);
+INSERT INTO public.tags VALUES (49, 'penetration', 0, 0, NULL, NULL, '2024-09-01 04:15:53.992044', '2024-09-01 04:15:53.992044', false);
+INSERT INTO public.tags VALUES (50, 'dominant_bottom', 0, 0, NULL, NULL, '2024-09-01 04:15:53.994002', '2024-09-01 04:15:53.994002', false);
+INSERT INTO public.tags VALUES (51, 'blushing', 0, 0, NULL, NULL, '2024-09-01 04:15:53.996135', '2024-09-01 04:15:53.996135', false);
+INSERT INTO public.tags VALUES (7, 'oscine', 0, 5, NULL, NULL, '2024-09-01 04:10:03.42197', '2024-09-06 00:39:17.486502', false);
+INSERT INTO public.tags VALUES (8, 'passerine', 0, 5, NULL, NULL, '2024-09-01 04:10:03.442101', '2024-09-06 00:39:18.176805', false);
+INSERT INTO public.tags VALUES (12, 'felid', 1, 5, NULL, NULL, '2024-09-01 04:13:16.415795', '2024-09-06 00:39:20.154368', false);
+INSERT INTO public.tags VALUES (13, 'cheetah', 1, 5, NULL, NULL, '2024-09-01 04:13:16.428936', '2024-09-06 00:39:20.859682', false);
+INSERT INTO public.tags VALUES (14, 'feline', 1, 5, NULL, NULL, '2024-09-01 04:13:16.441388', '2024-09-06 00:39:21.550432', false);
+INSERT INTO public.tags VALUES (15, 'felis', 1, 5, NULL, NULL, '2024-09-01 04:13:16.453479', '2024-09-06 00:39:22.190237', false);
+INSERT INTO public.tags VALUES (1, 'basil', 0, 4, NULL, NULL, '2024-09-01 04:10:03.246774', '2024-09-06 00:39:22.827788', false);
+INSERT INTO public.tags VALUES (52, 'hi_res', 0, 7, NULL, NULL, '2024-09-01 04:15:53.99804', '2024-09-06 00:39:24.114902', false);
+INSERT INTO public.tags VALUES (42, 'serene_form', 0, 4, NULL, NULL, '2024-09-01 04:13:16.799026', '2024-09-06 00:40:16.346488', false);
 INSERT INTO public.tags VALUES (16, 'mammal', 1, 0, NULL, NULL, '2024-09-01 04:13:16.46498', '2024-09-01 04:13:16.46498', false);
 INSERT INTO public.tags VALUES (17, 'black_body', 1, 0, NULL, NULL, '2024-09-01 04:13:16.490501', '2024-09-01 04:13:16.490501', false);
 INSERT INTO public.tags VALUES (18, 'black_fur', 1, 0, NULL, NULL, '2024-09-01 04:13:16.502694', '2024-09-01 04:13:16.502694', false);
@@ -854,10 +516,12 @@ INSERT INTO public.tags VALUES (23, 'facial_tuft', 1, 0, NULL, NULL, '2024-09-01
 INSERT INTO public.tags VALUES (24, 'fur', 1, 0, NULL, NULL, '2024-09-01 04:13:16.58192', '2024-09-01 04:13:16.58192', false);
 INSERT INTO public.tags VALUES (25, 'hair', 1, 0, NULL, NULL, '2024-09-01 04:13:16.594606', '2024-09-01 04:13:16.594606', false);
 INSERT INTO public.tags VALUES (26, 'highlights_(coloring)', 1, 0, NULL, NULL, '2024-09-01 04:13:16.605708', '2024-09-01 04:13:16.605708', false);
+INSERT INTO public.tags VALUES (54, 'keavemind', 1, 1, NULL, NULL, '2024-09-06 00:27:41.378646', '2024-09-06 00:37:13.626836', false);
+INSERT INTO public.tags VALUES (53, 'sticker', 1, 7, NULL, NULL, '2024-09-06 00:27:41.365965', '2024-09-06 00:39:24.746397', false);
+INSERT INTO public.tags VALUES (55, 'maxwell_speedmew', 1, 4, NULL, NULL, '2024-09-06 00:27:41.381464', '2024-09-06 00:39:25.44084', false);
 INSERT INTO public.tags VALUES (27, 'industrial_piercing', 1, 0, NULL, NULL, '2024-09-01 04:13:16.616974', '2024-09-01 04:13:16.616974', false);
 INSERT INTO public.tags VALUES (28, 'industrial_piercing_ladder', 1, 0, NULL, NULL, '2024-09-01 04:13:16.628625', '2024-09-01 04:13:16.628625', false);
 INSERT INTO public.tags VALUES (29, 'inner_ear_fluff', 1, 0, NULL, NULL, '2024-09-01 04:13:16.640991', '2024-09-01 04:13:16.640991', false);
-INSERT INTO public.tags VALUES (30, 'male', 1, 0, NULL, NULL, '2024-09-01 04:13:16.655835', '2024-09-01 04:13:16.655835', false);
 INSERT INTO public.tags VALUES (31, 'markings', 1, 0, NULL, NULL, '2024-09-01 04:13:16.672714', '2024-09-01 04:13:16.672714', false);
 INSERT INTO public.tags VALUES (32, 'piercing', 1, 0, NULL, NULL, '2024-09-01 04:13:16.685807', '2024-09-01 04:13:16.685807', false);
 INSERT INTO public.tags VALUES (33, 'spots', 1, 0, NULL, NULL, '2024-09-01 04:13:16.69779', '2024-09-01 04:13:16.69779', false);
@@ -869,68 +533,18 @@ INSERT INTO public.tags VALUES (38, 'tongue_out', 1, 0, NULL, NULL, '2024-09-01 
 INSERT INTO public.tags VALUES (39, 'tuft', 1, 0, NULL, NULL, '2024-09-01 04:13:16.762596', '2024-09-01 04:13:16.762596', false);
 INSERT INTO public.tags VALUES (40, 'white_body', 1, 0, NULL, NULL, '2024-09-01 04:13:16.775128', '2024-09-01 04:13:16.775128', false);
 INSERT INTO public.tags VALUES (41, 'white_fur', 1, 0, NULL, NULL, '2024-09-01 04:13:16.7874', '2024-09-01 04:13:16.7874', false);
-INSERT INTO public.tags VALUES (42, 'serene_form', 1, 0, NULL, NULL, '2024-09-01 04:13:16.799026', '2024-09-01 04:13:16.799026', false);
-INSERT INTO public.tags VALUES (43, 'blue_eyes', 1, 0, NULL, NULL, '2024-09-01 04:13:16.802333', '2024-09-01 04:13:16.802333', false);
-INSERT INTO public.tags VALUES (44, 'starselle', 1, 1, NULL, NULL, '2024-09-01 04:14:23.914524', '2024-09-01 04:14:23.914524', false);
-INSERT INTO public.tags VALUES (46, 'chair_position', 1, 0, NULL, NULL, '2024-09-01 04:15:53.979974', '2024-09-01 04:15:53.979974', false);
-INSERT INTO public.tags VALUES (47, 'duo', 1, 0, NULL, NULL, '2024-09-01 04:15:53.987904', '2024-09-01 04:15:53.987904', false);
-INSERT INTO public.tags VALUES (48, 'male/male', 1, 0, NULL, NULL, '2024-09-01 04:15:53.989977', '2024-09-01 04:15:53.989977', false);
-INSERT INTO public.tags VALUES (49, 'penetration', 1, 0, NULL, NULL, '2024-09-01 04:15:53.992044', '2024-09-01 04:15:53.992044', false);
-INSERT INTO public.tags VALUES (50, 'dominant_bottom', 1, 0, NULL, NULL, '2024-09-01 04:15:53.994002', '2024-09-01 04:15:53.994002', false);
-INSERT INTO public.tags VALUES (51, 'blushing', 1, 0, NULL, NULL, '2024-09-01 04:15:53.996135', '2024-09-01 04:15:53.996135', false);
-INSERT INTO public.tags VALUES (52, 'hi_res', 1, 0, NULL, NULL, '2024-09-01 04:15:53.99804', '2024-09-01 04:15:53.99804', false);
-
-
---
--- Data for Name: takedowns; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: tickets; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: upload_whitelists; Type: TABLE DATA; Schema: public; Owner: -
---
-
-INSERT INTO public.upload_whitelists VALUES (1, 'https://static1.e621.net/*', NULL, NULL, true, false, '2024-09-05 21:49:03.194101', '2024-09-05 21:49:03.194101');
+INSERT INTO public.tags VALUES (9, 'anthro', 1, 5, '', '2024-09-06 00:27:21.729611', '2024-09-01 04:10:03.464472', '2024-09-06 00:39:18.862681', false);
+INSERT INTO public.tags VALUES (11, 'zuri', 1, 4, '', '2024-09-06 00:27:21.731565', '2024-09-01 04:13:16.410676', '2024-09-06 00:39:19.530088', false);
+INSERT INTO public.tags VALUES (48, 'male/male', 1, 0, '', '2024-09-06 00:27:21.722252', '2024-09-01 04:15:53.989977', '2024-09-06 00:27:21.725315', false);
+INSERT INTO public.tags VALUES (47, 'duo', 1, 0, '', '2024-09-06 00:27:21.733254', '2024-09-01 04:15:53.987904', '2024-09-06 00:27:21.733987', false);
+INSERT INTO public.tags VALUES (30, 'male', 1, 0, '', '2024-09-06 00:27:21.735591', '2024-09-01 04:13:16.655835', '2024-09-06 00:27:21.736115', false);
 
 
 --
 -- Data for Name: uploads; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.uploads VALUES (1, '', 'e', 1, '172.19.0.1', 'male duo male/male anthro penetration chair_position dominant_bottom blushing starselle zuri serene_form basil ', 'completed', NULL, 1, NULL, '2024-09-01 04:15:53.560501', '2024-09-01 04:15:54.055169', NULL, '93dabc87fc19755e89e8510a35e4dfc6', 'png', 2186647, 1900, 1500, '');
-
-
---
--- Data for Name: user_feedback; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: user_name_change_requests; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: user_password_reset_nonces; Type: TABLE DATA; Schema: public; Owner: -
---
-
-
-
---
--- Data for Name: user_statuses; Type: TABLE DATA; Schema: public; Owner: -
---
-
-INSERT INTO public.user_statuses VALUES (1, '2024-09-05 21:48:52.881003', '2024-09-05 21:48:52.881003', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-INSERT INTO public.user_statuses VALUES (2, '2024-09-05 21:49:00.751131', '2024-09-05 21:49:00.751131', 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO public.uploads VALUES (2, '', 's', 1, '172.18.0.1', 'male duo male/male anthro sticker keavemind maxwell_speedmew zuri ', 'completed', NULL, 2, NULL, '2024-09-06 00:27:41.190681', '2024-09-06 00:27:41.459018', NULL, '13866433806034495e2e8bc78656047e', 'png', 204196, 512, 512, '');
 
 
 --
@@ -956,21 +570,21 @@ SELECT pg_catalog.setval('public.api_keys_id_seq', 1, false);
 -- Name: artist_urls_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.artist_urls_id_seq', 4, true);
+SELECT pg_catalog.setval('public.artist_urls_id_seq', 8, true);
 
 
 --
 -- Name: artist_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.artist_versions_id_seq', 2, true);
+SELECT pg_catalog.setval('public.artist_versions_id_seq', 3, true);
 
 
 --
 -- Name: artists_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.artists_id_seq', 2, true);
+SELECT pg_catalog.setval('public.artists_id_seq', 3, true);
 
 
 --
@@ -1026,7 +640,7 @@ SELECT pg_catalog.setval('public.comments_id_seq', 1, false);
 -- Name: destroyed_posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.destroyed_posts_id_seq', 1, false);
+SELECT pg_catalog.setval('public.destroyed_posts_id_seq', 1, true);
 
 
 --
@@ -1061,7 +675,7 @@ SELECT pg_catalog.setval('public.email_blacklists_id_seq', 1, false);
 -- Name: exception_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.exception_logs_id_seq', 1, false);
+SELECT pg_catalog.setval('public.exception_logs_id_seq', 1, true);
 
 
 --
@@ -1194,7 +808,7 @@ SELECT pg_catalog.setval('public.post_disapprovals_id_seq', 1, false);
 -- Name: post_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.post_events_id_seq', 1, false);
+SELECT pg_catalog.setval('public.post_events_id_seq', 1, true);
 
 
 --
@@ -1236,7 +850,7 @@ SELECT pg_catalog.setval('public.post_sets_id_seq', 1, false);
 -- Name: post_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.post_versions_id_seq', 1, true);
+SELECT pg_catalog.setval('public.post_versions_id_seq', 2, true);
 
 
 --
@@ -1250,14 +864,14 @@ SELECT pg_catalog.setval('public.post_votes_id_seq', 1, false);
 -- Name: posts_change_seq_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.posts_change_seq_seq', 1, true);
+SELECT pg_catalog.setval('public.posts_change_seq_seq', 2, true);
 
 
 --
 -- Name: posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.posts_id_seq', 1, true);
+SELECT pg_catalog.setval('public.posts_id_seq', 2, true);
 
 
 --
@@ -1299,14 +913,14 @@ SELECT pg_catalog.setval('public.tag_rel_undos_id_seq', 1, false);
 -- Name: tag_type_versions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.tag_type_versions_id_seq', 1, false);
+SELECT pg_catalog.setval('public.tag_type_versions_id_seq', 19, true);
 
 
 --
 -- Name: tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.tags_id_seq', 52, true);
+SELECT pg_catalog.setval('public.tags_id_seq', 55, true);
 
 
 --
@@ -1334,7 +948,7 @@ SELECT pg_catalog.setval('public.upload_whitelists_id_seq', 1, true);
 -- Name: uploads_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.uploads_id_seq', 1, true);
+SELECT pg_catalog.setval('public.uploads_id_seq', 2, true);
 
 
 --
