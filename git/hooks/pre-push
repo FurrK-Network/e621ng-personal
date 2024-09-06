@@ -1,7 +1,8 @@
 #!/bin/bash
-../../../scripts/backup.sh
+echo "Running pre-push hooks"
+../../scripts/backup.sh
 
-git add ../../../dump/pg_dump.sql
+git add ../../dump/pg_dump.sql
 git commit -m 'Dump'
 
 exit 0
