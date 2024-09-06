@@ -37,10 +37,12 @@ docker compose run --rm e621 /app/bin/setup
 echo "Running Docker Compose Up"
 docker compose up -d
 
-echo "Running Initialization of RSync"
-# sudo chmod 777 $ART_DATA_DIR/redis_data_v2/
-$SCRIPT_DIR/init_rsync.sh $ART_DATA_DIR $BACKUP_DIR >$LOGS_DIR/init_rsync.log 2>&1
 
 echo "Running Initialization of Database"
 $SCRIPT_DIR/migrate_db.sh $DUMP_DATA_DIR >$LOGS_DIR/migrate_db.log 2>&1
+
+
+echo "Running Initialization of RSync"
+# sudo chmod 777 $ART_DATA_DIR/redis_data_v2/
+$SCRIPT_DIR/init_rsync.sh $ART_DATA_DIR $BACKUP_DIR >$LOGS_DIR/init_rsync.log
 exit 0

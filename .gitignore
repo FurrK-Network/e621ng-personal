@@ -30,3 +30,4 @@ test/reports
 yarn-debug.log*
 .yarn-integrity
 **/ART_DATA
+**/*.log
